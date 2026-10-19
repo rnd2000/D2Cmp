@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D2CMP", "D2CMP.vcxproj", "{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}.Debug|x86.ActiveCfg = Debug|Win32
+		{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}.Debug|x86.Build.0 = Debug|Win32
+		{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}.Release|x86.ActiveCfg = Release|Win32
+		{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDD85347-5498-441D-9572-2DA4D533A466}
+	EndGlobalSection
+EndGlobal

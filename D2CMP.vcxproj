@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A8B8A880-22B3-4DA5-8D83-416FAD1D756B}</ProjectGuid>
+    <RootNamespace>D2CMP</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <!-- OFF ON PURPOSE, as in D2Client.vcxproj: /GL lets the linker give a
+         function a private calling convention when it sees every caller, which
+         is the wrong answer for a rewrite whose point is the original ABI. -->
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <!-- Incremental linking puts every function behind an ILT jump thunk, so the
+       export RVAs would point at a `jmp`; off, as in D2Client.vcxproj, so the
+       built DLL compares with the original as data. -->
+  <PropertyGroup>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>D2CMP</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;D2CMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <!-- Our ordinals; every other of the 107 is a forwarder to
+           _Original_D2CMP.dll in Forwarders.cpp. -->
+      <ModuleDefinitionFile>D2CMP.def</ModuleDefinitionFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;D2CMP_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>D2CMP.def</ModuleDefinitionFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="D2CMP.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLmain.cpp" />
+    <ClCompile Include="Forwarders.cpp" />
+    <ClCompile Include="CelCmp.cpp" />
+    <ClCompile Include="CelDataHash.cpp" />
+    <ClCompile Include="Codec.cpp" />
+    <ClCompile Include="Count.cpp" />
+    <ClCompile Include="FastCmp.cpp" />
+    <ClCompile Include="FindTiles.cpp" />
+    <ClCompile Include="GfxHash.cpp" />
+    <ClCompile Include="LRUCache.cpp" />
+    <ClCompile Include="Palette.cpp" />
+    <ClCompile Include="PalShift.cpp" />
+    <ClCompile Include="Raw.cpp" />
+    <ClCompile Include="SpriteCache.cpp" />
+    <ClCompile Include="SubTile.cpp" />
+    <ClCompile Include="TileCache.cpp" />
+    <ClCompile Include="Tilecmp.cpp" />
+    <ClCompile Include="TileLib.cpp" />
+    <ClCompile Include="TileProjects.cpp" />
+    <ClCompile Include="Archive.cpp" />
+    <ClCompile Include="Shared.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DLLmain.h" />
+    <ClInclude Include="D2CMP.h" />
+    <ClInclude Include="D2Constants.h" />
+    <ClInclude Include="D2Structs.h" />
+    <ClInclude Include="D2Ptrs.h" />
+    <ClInclude Include="D2Vars.h" />
+    <ClInclude Include="D2Imports.h" />
+    <ClInclude Include="CelCmp.h" />
+    <ClInclude Include="CelDataHash.h" />
+    <ClInclude Include="Codec.h" />
+    <ClInclude Include="Count.h" />
+    <ClInclude Include="FastCmp.h" />
+    <ClInclude Include="FindTiles.h" />
+    <ClInclude Include="GfxHash.h" />
+    <ClInclude Include="LRUCache.h" />
+    <ClInclude Include="Palette.h" />
+    <ClInclude Include="PalShift.h" />
+    <ClInclude Include="Raw.h" />
+    <ClInclude Include="SpriteCache.h" />
+    <ClInclude Include="SubTile.h" />
+    <ClInclude Include="TileCache.h" />
+    <ClInclude Include="Tilecmp.h" />
+    <ClInclude Include="TileLib.h" />
+    <ClInclude Include="TileProjects.h" />
+    <ClInclude Include="Archive.h" />
+    <ClInclude Include="Shared.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
