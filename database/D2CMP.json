@@ -1,0 +1,7838 @@
+{
+ "module": "D2CMP",
+ "input_file": "D2CMP.dll",
+ "imagebase": "0x6FDF0000",
+ "counts": {
+  "functions": 511,
+  "named": 511,
+  "with_prototype": 430,
+  "with_source_file": 118,
+  "exports": 105,
+  "globals": 209,
+  "types": 1099
+ },
+ "source_files": {
+  "CelCmp.cpp": 31,
+  "SpriteCache.cpp": 18,
+  "Tilecmp.cpp": 14,
+  "TileLib.cpp": 14,
+  "FastCmp.cpp": 5,
+  "LRUCache.cpp": 5,
+  "SubTile.cpp": 5,
+  "FindTiles.cpp": 4,
+  "Codec.cpp": 3,
+  "Count.cpp": 3,
+  "GfxHash.cpp": 3,
+  "Archive.cpp": 3,
+  "CelDataHash.cpp": 2,
+  "Palette.cpp": 2,
+  "PalShift.cpp": 2,
+  "TileProjects.cpp": 2,
+  "Raw.cpp": 1,
+  "TileCache.cpp": 1
+ },
+ "functions": [
+  {
+   "ea": "0x6FDF1000",
+   "ordinal": null,
+   "name": "CRT_CELCMP_CellBuilderTable_InitializeAtStartup",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 22,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1020",
+   "ordinal": null,
+   "name": "CRT_CELCMP_CellBuilderTable_DestroyAtExit",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 10,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1030",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_SyncDestroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTablePrefix *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@@@",
+    ".?AUCELLIST@@"
+   ],
+   "size": 408,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF11D0",
+   "ordinal": 10017,
+   "name": "CELCMP_CelNormalDirToFileDir",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(uint32_t nDirection32, uint32_t nDirectionCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF11F0",
+   "ordinal": 10018,
+   "name": "CELCMP_CelGameDirToFileDir",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(uint32_t nDirection64, uint32_t nDirectionCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1210",
+   "ordinal": 10019,
+   "name": "CELCMP_CelConvertDir",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(uint32_t nDirection, uint32_t nStartDirections, uint32_t nRepresentativeDirections, int32_t bAlternate)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "nDirection < nStartDirs",
+    "Could not convert direction!"
+   ],
+   "size": 156,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF12B0",
+   "ordinal": 10020,
+   "name": "CELCMP_CelConvertBlock",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(int32_t nSourceDirections, int32_t nTargetDirections)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "Could not convert direction!"
+   ],
+   "size": 71,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1300",
+   "ordinal": 10021,
+   "name": "CELCMP_CelGameDirToShadowGameDir",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(uint32_t nGameDirection, uint32_t nLevelOfRotation)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "nGameDirection < CELFILE_NUMGAMEDIRECTIONS",
+    "GetFirstBit( nLevelOfRotation ) < 8",
+    "BITCOUNT( nLevelOfRotation ) == 1"
+   ],
+   "size": 217,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF13E0",
+   "ordinal": null,
+   "name": "CRT_CELCMP_OperatorDelete",
+   "demangled": null,
+   "prototype": "void __cdecl(void *pAllocation)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 24,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1400",
+   "ordinal": 10022,
+   "name": "CELCMP_CelGameDirToNormalDir",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(uint32_t nGameDirection, uint32_t nLevelOfRotation)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "nGameDirection < CELFILE_NUMGAMEDIRECTIONS",
+    "GetFirstBit( nLevelOfRotation ) < 8",
+    "BITCOUNT( nLevelOfRotation ) == 1"
+   ],
+   "size": 217,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF14E0",
+   "ordinal": 10013,
+   "name": "CELCMP_CelCompressCreate",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(int32_t nFormat, uint32_t nDirections, const uint32_t *pTransparentColor, int32_t bRGB24)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "BITCOUNT( dwNumDirections ) == 1",
+    "dwNumDirections <= 32",
+    "format < NUM_CELFORMATS",
+    ".?AUTCELENTRY@@"
+   ],
+   "size": 385,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1670",
+   "ordinal": 10015,
+   "name": "CELCMP_CelCompressAddImage",
+   "demangled": null,
+   "prototype": "void __stdcall(uint32_t hBuilder, const uint8_t *pImage, uint32_t nImageStride, uint32_t nPixelHeight, uint32_t nPixelWidth, int32_t nOffsetX, int32_t nOffsetY, int32_t nOrientation)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "dwImageByteStride >= dwPixelWidth",
+    "dwPixelHeight && dwPixelWidth"
+   ],
+   "size": 364,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF17E0",
+   "ordinal": 10014,
+   "name": "CELCMP_CelCompressDestroy",
+   "demangled": null,
+   "prototype": "void __stdcall(uint32_t hBuilder)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    ".?AUTCELENTRY@@"
+   ],
+   "size": 227,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF18D0",
+   "ordinal": 10016,
+   "name": "CELCMP_CelCompressCreateCelFile",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(uint32_t hBuilder, D2CmpBuiltCellFile **ppOutput)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 295,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1A00",
+   "ordinal": 10029,
+   "name": "CELCMP_CelFileHalve",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t hFile, int32_t nUnused)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "hFile"
+   ],
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1A30",
+   "ordinal": 10025,
+   "name": "CELCMP_CelFileConvert24To8",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpBuiltCellFile *pSrc, D2CmpBuiltCellFile **ppOutFile, uint8_t (__stdcall *pfMapRgbToIndex)(uint8_t nRed, uint8_t nGreen, uint8_t nBlue), uint32_t dwTransparentColor)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pFile->dwFlags & CELFILE_24BIT"
+   ],
+   "size": 148,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1AD0",
+   "ordinal": 10030,
+   "name": "CELCMP_CelFileConvertOldToNew",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpSerializedCellFileV5Header *pOldFile, D2CmpBuiltCellFile **ppNewFile, int32_t *pNewFileSize)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pOldFile->dwFlags & CELFILE_SERIALIZED",
+    "pOldFile->dwVersion == ( CELFILE_VERSION - 1 )"
+   ],
+   "size": 496,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1CC0",
+   "ordinal": 10026,
+   "name": "CELCMP_CelFileIteratePixels",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpRgb24RuntimeFilePrefix *pFile, D2CmpPackedColorCallback pVisitColor)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pFile->dwFlags & CELFILE_24BIT"
+   ],
+   "size": 109,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1D30",
+   "ordinal": 10023,
+   "name": "CELCMP_CelFileSerialize",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpBuiltCellFile *pFile, D2CmpBuiltCellFile **ppSerializedFile, int32_t *pSerializedSize)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 359,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1EA0",
+   "ordinal": 10024,
+   "name": "CELCMP_CelFileNormalize",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpBuiltCellFile *pFile, D2CmpBuiltCellFile **ppOutFile, const char *szFile, int32_t nLine, int32_t nSpecVersion, int32_t nUnused)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pFile->dwFlags & CELFILE_SERIALIZED",
+    "pFile->dwVersion == CELFILE_VERSION",
+    "pFile->dwVersion == (DWORD)nSpecVersion"
+   ],
+   "size": 254,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1FA0",
+   "ordinal": 10028,
+   "name": "CELCMP_CelFileFreeSerialized",
+   "demangled": null,
+   "prototype": "void __stdcall(void *pSerializedFile)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pSerializedFile"
+   ],
+   "size": 58,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF1FE0",
+   "ordinal": 10027,
+   "name": "CELCMP_CelFileFree",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpBuiltCellFile *pFile)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile"
+   ],
+   "size": 79,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2030",
+   "ordinal": 10031,
+   "name": "CELCMP_CelFileTransform",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpBuiltCellFile *pFile, const uint8_t *pPaletteMap)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile"
+   ],
+   "size": 98,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF20A0",
+   "ordinal": 10033,
+   "name": "CELCMP_CelDraw",
+   "demangled": null,
+   "prototype": "void __stdcall(D2GfxDataStrc *pContext, int32_t nX, int32_t nY, int32_t nClipLeft, int32_t nClipRight, uint8_t *pDestSurface, int32_t nSurfaceBottom, uint32_t dwStride, const uint8_t *pPaletteMap, const uint8_t *pBlendTable, const uint8_t *pPreMap)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile->dwVersion == CELFILE_VERSION",
+    "!( pCelFile->dwFlags & CELFILE_24BIT )",
+    "pDestSurface",
+    "sgpfnDecodeFunc[eFormat]"
+   ],
+   "size": 367,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2210",
+   "ordinal": 10042,
+   "name": "CELCMP_CelGetRawData",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpBuiltCellFile *pFile, uint32_t nDirection64, uint32_t nFrame, uint8_t *pBuffer)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile->dwVersion == CELFILE_VERSION",
+    "pCelFile->dwFlags & CELFILE_24BIT"
+   ],
+   "size": 162,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF22C0",
+   "ordinal": 10034,
+   "name": "CELCMP_CelDrawEx",
+   "demangled": null,
+   "prototype": "void __stdcall(D2GfxDataStrc *pContext, int32_t nX, int32_t nY, int32_t nClipLeft, int32_t nClipRight, uint8_t *pDestSurface, int32_t nSurfaceBottom, uint32_t dwStride, const uint8_t *pPaletteMap, const uint8_t *pBlendTable, int32_t nLinesToSkip, int32_t nLinesToDraw, const uint8_t *pPreMap)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile->dwVersion == CELFILE_VERSION",
+    "!( pCelFile->dwFlags & CELFILE_24BIT )",
+    "pDestSurface",
+    "sgpfnDecodeFunc[pCelFile->format]"
+   ],
+   "size": 325,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2410",
+   "ordinal": 10035,
+   "name": "CELCMP_CelDrawShadow",
+   "demangled": null,
+   "prototype": "void __stdcall(D2GfxDataStrc *pContext, int32_t nX, int32_t nY, int32_t nClipLeft, int32_t nClipRight, uint8_t *pDestSurface, int32_t nSurfaceBottom, uint32_t dwStride, const uint8_t *pBlendTable, uint8_t nShadowColor)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelFile->dwVersion == CELFILE_VERSION",
+    "!( pCelFile->dwFlags & CELFILE_24BIT )",
+    "pDestSurface"
+   ],
+   "size": 289,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2540",
+   "ordinal": 10036,
+   "name": "CELCMP_CelGetHandle",
+   "demangled": null,
+   "prototype": "D2CmpRleCellHeader *__stdcall(D2GfxDataStrc *pContext)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pCelContext",
+    "ValidCelContext( pCelContext )"
+   ],
+   "size": 146,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF25E0",
+   "ordinal": 10037,
+   "name": "CELCMP_CelGetWidth",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2610",
+   "ordinal": 10038,
+   "name": "CELCMP_CelGetHeight",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2640",
+   "ordinal": 10039,
+   "name": "CELCMP_CelGetOffsetX",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2670",
+   "ordinal": 10040,
+   "name": "CELCMP_CelGetOffsetY",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": null,
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF26A0",
+   "ordinal": 10041,
+   "name": "CELCMP_CelGetControlData",
+   "demangled": null,
+   "prototype": "uint8_t *__stdcall(D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "ptCel"
+   ],
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF26D0",
+   "ordinal": 10047,
+   "name": "CELCMP_CelFileGetNumDirections",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpBuiltCellFile *pFile)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pFile->dwVersion == CELFILE_VERSION"
+   ],
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2700",
+   "ordinal": 10046,
+   "name": "CELCMP_CelFileGetCelsPerDirection",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpBuiltCellFile *pCelFile)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "pFile->dwVersion == CELFILE_VERSION"
+   ],
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2730",
+   "ordinal": 10044,
+   "name": "CELCMP_CelSetHardwareFreeCallback",
+   "demangled": null,
+   "prototype": "D2CmpCelHardwareFreeCallback __stdcall(D2CmpCelHardwareFreeCallback pfnHardwareFree)",
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2740",
+   "ordinal": 10045,
+   "name": "CELCMP_CelGetHardwareFreeCallback",
+   "demangled": null,
+   "prototype": "D2CmpCelHardwareFreeCallback __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2750",
+   "ordinal": 10032,
+   "name": "CELCMP_CelFileFreeHardware",
+   "demangled": null,
+   "prototype": "BOOL __stdcall(D2CmpBuiltCellFile *pFile)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "ptFile->dwVersion == CELFILE_VERSION",
+    "lpParent"
+   ],
+   "size": 196,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2820",
+   "ordinal": 10043,
+   "name": "CELCMP_CelGetHardwareData",
+   "demangled": null,
+   "prototype": "void *__stdcall(const D2CmpRleCellHeader *pCel)",
+   "source_file": "CelCmp.cpp",
+   "asserts": [
+    "ptCel"
+   ],
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2850",
+   "ordinal": null,
+   "name": "CELCMP_CellEntryList_NewNode",
+   "demangled": null,
+   "prototype": "D2CmpCellBuildEntry *__thiscall(D2CmpStormList *pList, uint32_t nLocation, uint32_t nExtraBytes, uint32_t dwAllocFlags)",
+   "source_file": null,
+   "asserts": [
+    ".?AUTCELENTRY@@"
+   ],
+   "size": 210,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2930",
+   "ordinal": null,
+   "name": "CRT_CELCMP_CellBuilderTable_Construct",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilderTablePrefix *__thiscall(D2CmpCellBuilderTablePrefix *pTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 296,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2A60",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ClearObjects",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableHeader *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@@@",
+    ".?AUCELLIST@@"
+   ],
+   "size": 142,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2AF0",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_InternalDelete",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableHeader *pUnusedTable, D2CmpCellBuilder *pBuilder)",
+   "source_file": null,
+   "asserts": [
+    ".?AUCELLIST@@"
+   ],
+   "size": 31,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2B10",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_InternalNew",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilder *__thiscall(D2CmpCellBuilderTableHeader *pUnusedTable, D2CmpStormList *pBucket, uint32_t nExtraBytes, uint32_t dwFlags)",
+   "source_file": null,
+   "asserts": null,
+   "size": 24,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2B30",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_BaseDestroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableHeader *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@"
+   ],
+   "size": 376,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2CB0",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ResetAndReleaseBuckets",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableHeader *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@"
+   ],
+   "size": 211,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2D90",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_SyncScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilderTableHeader *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint8_t nFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2DC0",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilder_ScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilder *__thiscall(D2CmpCellBuilder *pBuilder, uint8_t nFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2DF0",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ReuseScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilderTableHeader *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint8_t nFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2E20",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ReuseDestroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableReusePrefix *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@@@",
+    ".?AUCELLIST@@"
+   ],
+   "size": 397,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF2FB0",
+   "ordinal": null,
+   "name": "CELCMP_StormList_UnlinkAllAndTerminator",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 119,
+   "callers": 20,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3030",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_BaseScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilderTableHeader *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint8_t nFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3060",
+   "ordinal": null,
+   "name": "CELCMP_StormListArray_DestroyWithUnwind",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormListArray *pArray)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@"
+   ],
+   "size": 161,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3110",
+   "ordinal": null,
+   "name": "CELCMP_StormLink_Unlink",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormLink *pLink)",
+   "source_file": null,
+   "asserts": null,
+   "size": 54,
+   "callers": 38,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3150",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilder_Destroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilder *pBuilder)",
+   "source_file": null,
+   "asserts": null,
+   "size": 227,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3240",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderList_NewNode",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilder *__thiscall(D2CmpStormList *pList, uint32_t dwLocation, uint32_t nExtraBytes, uint32_t dwFlags)",
+   "source_file": null,
+   "asserts": [
+    ".?AUCELLIST@@"
+   ],
+   "size": 225,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3330",
+   "ordinal": null,
+   "name": "CELCMP_StormListArray_Destroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormListArray *pArray)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@"
+   ],
+   "size": 63,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3370",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ExportScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilderTableHeader *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint8_t nFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF33A0",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_ExportDestroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableReusePrefix *pTable)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSHashObjectChunk@UCELLIST@@VHASHKEY_NONE@@@@",
+    ".?AUCELLIST@@"
+   ],
+   "size": 347,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3500",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_New",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilder *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint32_t dwHandleHash, const uint8_t *pKey, uint32_t nExtraBytes, uint32_t dwAllocFlags)",
+   "source_file": null,
+   "asserts": null,
+   "size": 262,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3610",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_Find",
+   "demangled": null,
+   "prototype": "D2CmpCellBuilder *__thiscall(D2CmpCellBuilderTableHeader *pTable, uint32_t dwHandleHash, const uint8_t *pUnusedKey)",
+   "source_file": null,
+   "asserts": null,
+   "size": 78,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3660",
+   "ordinal": null,
+   "name": "CELCMP_StormList_GetLink",
+   "demangled": null,
+   "prototype": "D2CmpStormLink *__thiscall(D2CmpStormList *pList, const void *pNode)",
+   "source_file": null,
+   "asserts": null,
+   "size": 21,
+   "callers": 9,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3680",
+   "ordinal": null,
+   "name": "CELCMP_StormList_UnlinkAll",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 69,
+   "callers": 6,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF36D0",
+   "ordinal": null,
+   "name": "CELCMP_StormList_ScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "D2CmpStormList *__thiscall(D2CmpStormList *pList, uint8_t bDeleteFlags)",
+   "source_file": null,
+   "asserts": [
+    "delete"
+   ],
+   "size": 40,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3700",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderObjectChunk_Destroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderObjectChunk *pChunk)",
+   "source_file": null,
+   "asserts": [
+    ".?AUCELLIST@@"
+   ],
+   "size": 243,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3800",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilder_UnlinkHashLinks",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilder *pBuilder)",
+   "source_file": null,
+   "asserts": null,
+   "size": 112,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3870",
+   "ordinal": null,
+   "name": "CELCMP_StormLink_GetNext",
+   "demangled": null,
+   "prototype": "void *__thiscall(D2CmpStormLink *pLink)",
+   "source_file": null,
+   "asserts": null,
+   "size": 14,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3880",
+   "ordinal": null,
+   "name": "CELCMP_StormList_GetEmbeddedLink",
+   "demangled": null,
+   "prototype": "D2CmpStormLink *__thiscall(D2CmpStormList *pList, void *pNode)",
+   "source_file": null,
+   "asserts": null,
+   "size": 14,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3890",
+   "ordinal": null,
+   "name": "CRT_CELCMP_StormList_InitializePoisonedOffset",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF38B0",
+   "ordinal": null,
+   "name": "CRT_CELCMP_StormList_ChangeLinkOffset",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList, int nNewLinkOffset)",
+   "source_file": null,
+   "asserts": null,
+   "size": 95,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3910",
+   "ordinal": null,
+   "name": "CELCMP_StormLink_GetNextLink",
+   "demangled": null,
+   "prototype": "D2CmpStormLink *__thiscall(D2CmpStormLink *pLink, int32_t nLinkOffset)",
+   "source_file": null,
+   "asserts": null,
+   "size": 36,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3940",
+   "ordinal": null,
+   "name": "CELCMP_StormExplicitList_GetLink",
+   "demangled": null,
+   "prototype": "D2CmpStormLink *__fastcall(const void *pNode, int32_t nLinkOffset)",
+   "source_file": null,
+   "asserts": null,
+   "size": 4,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3950",
+   "ordinal": null,
+   "name": "CELCMP_CellBuilderTable_Rehash",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpCellBuilderTableHeader *pTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 448,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3B10",
+   "ordinal": null,
+   "name": "CRT_CELCMP_StormList_InitializeOffsetZero",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3B30",
+   "ordinal": null,
+   "name": "CRT_CELCMP_StormListArray_Initialize",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormListArray *pArray)",
+   "source_file": null,
+   "asserts": null,
+   "size": 16,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3B40",
+   "ordinal": null,
+   "name": "CELCMP_StormList_InitializeTerminator",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 11,
+   "callers": 6,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3B50",
+   "ordinal": null,
+   "name": "CELCMP_StormListArray_SetCount",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpStormListArray *pArray, uint32_t dwNewCount)",
+   "source_file": null,
+   "asserts": [
+    ".?AV?$TSExplicitList@UCELLIST@@$0?CCCCCCCD@@@"
+   ],
+   "size": 365,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3CC0",
+   "ordinal": null,
+   "name": "CELCMP_StormList_InitializePoisonedOffsetIfNonNull",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpStormList *pList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 34,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3CF0",
+   "ordinal": null,
+   "name": "CELCMP_StormList_InitializeOffsetFromSourceIfNonNull",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpStormList *pList, const D2CmpStormList *pSource)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3D10",
+   "ordinal": null,
+   "name": "CELDATAHASH_Clear",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCelHeaderHash *pHash)",
+   "source_file": null,
+   "asserts": null,
+   "size": 14,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3D20",
+   "ordinal": null,
+   "name": "CELDATAHASH_FindEntry",
+   "demangled": null,
+   "prototype": "D2CmpCelHeaderHashEntry *__fastcall(D2CmpCelHeaderHash *pHash, const char *szKey)",
+   "source_file": null,
+   "asserts": null,
+   "size": 148,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3DC0",
+   "ordinal": null,
+   "name": "CELDATAHASH_NewEntry",
+   "demangled": null,
+   "prototype": "D2CmpCelHeaderHashEntry *__fastcall(void *pPool, D2CmpCelHeaderHash *pHash, D2CmpLruEntry *pLruEntry, const char *szKey)",
+   "source_file": "CelDataHash.cpp",
+   "asserts": null,
+   "size": 148,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3E60",
+   "ordinal": null,
+   "name": "CELDATAHASH_DeleteEntry",
+   "demangled": null,
+   "prototype": "void __fastcall(void *pPool, D2CmpCelHeaderHash *pHash, D2CmpCelHeaderHashEntry *ptElement)",
+   "source_file": "CelDataHash.cpp",
+   "asserts": [
+    "ptElement"
+   ],
+   "size": 105,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3ED0",
+   "ordinal": 10103,
+   "name": "CELDATAHASH_10106",
+   "demangled": null,
+   "prototype": "void __fastcall(void *pHash)",
+   "source_file": null,
+   "asserts": null,
+   "size": 1,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF3EE0",
+   "ordinal": null,
+   "name": "CODEC_EncodeDccFrameRle",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2CmpDccFrameState *pFrame, D2CmpSpriteFrameHeaderPrefix *pOutputFrame, uint8_t *pDestination)",
+   "source_file": "Codec.cpp",
+   "asserts": [
+    "Sprite Decompression Error -- EXP: (dest != &pCel->bControlData[pCel->dwControlSize])   VALUE: dest == %x   &pCel->bControlData[pCel->dwControlSize] == %x   FILE: %s   LINE: %d"
+   ],
+   "size": 353,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4050",
+   "ordinal": null,
+   "name": "CODEC_ReadDccHeader",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(const char *szPath, D2CmpSpriteHeaderData *pHeader)",
+   "source_file": "Codec.cpp",
+   "asserts": [
+    "header.spriteDirections <= 32"
+   ],
+   "size": 272,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4160",
+   "ordinal": null,
+   "name": "CODEC_DecodeDccDirections",
+   "demangled": null,
+   "prototype": "void *__fastcall(void *pInput, void *pPool, int32_t nInputBytes, D2CmpSpriteHeaderData *pHeader, D2CmpSpriteGfxBlockPrefix *pGfxBlock, int32_t nStartDirection, int32_t nDirections, uint32_t *pDecodedBytes, const char *szKey)",
+   "source_file": "Codec.cpp",
+   "asserts": [
+    "dir < sprite->directions",
+    "left >= 0",
+    "top >= 0",
+    "curcell->image",
+    "Sprite Decompression Error -- File:%s",
+    "Dir:%d  Cell#:%d  Wid:%d  Ht:%d  OffX:%d  OffY:%d",
+    "ControlSize:%d",
+    "Buffer -- Len:%d  Checksum:%d",
+    "Error decompressing sprite - Possible corruption in data file: %s"
+   ],
+   "size": 3494,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4F10",
+   "ordinal": null,
+   "name": "CODEC_SkipBits",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCodecBitReader *pReader, int32_t nBits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 34,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4F40",
+   "ordinal": null,
+   "name": "CODEC_AlignReaderToByte",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCodecBitReader *pReader)",
+   "source_file": null,
+   "asserts": null,
+   "size": 31,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4F60",
+   "ordinal": null,
+   "name": "CODEC_ReadBits",
+   "demangled": null,
+   "prototype": "uint32_t __fastcall(D2CmpCodecBitReader *pReader, int32_t nBits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 120,
+   "callers": 7,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF4FE0",
+   "ordinal": null,
+   "name": "CODEC_AdvanceDccCell",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2CmpDccDirectionContext *pDirection, D2CmpDccCellCursor *pCursor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 454,
+   "callers": 6,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF51B0",
+   "ordinal": null,
+   "name": "CODEC_StartDccCells",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2CmpDccDirectionContext *pDirection, D2CmpDccCellCursor *pCursor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF51E0",
+   "ordinal": null,
+   "name": "CODEC_BuildDccPaletteMaps",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pPresence, D2CmpDccPaletteMap *pForward, D2CmpDccPaletteMap *pInverse)",
+   "source_file": null,
+   "asserts": null,
+   "size": 60,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5220",
+   "ordinal": null,
+   "name": "CODEC_RasterizeDccCell",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpDccCellState *pCurrent, D2CmpCodecBitReader *pPixels, D2CmpDccCellState *pPrevious, D2CmpCodecBitReader *pEqualCells, uint8_t **ppPaletteCursor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 755,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5520",
+   "ordinal": null,
+   "name": "CODEC_DecodeDccCodebooks",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpDccDirectionContext *pDirection, D2CmpDccCellState *pHistory, D2CmpCodecBitReader *pEqualCells, D2CmpCodecBitReader *pMasks, D2CmpCodecBitReader *pEncodingTypes, D2CmpCodecBitReader *pRawCodes, D2CmpCodecBitReader *pPixelCodes, D2CmpCodecByteSpan *pCodebooks, int32_t *pConsumedPixelBits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 1211,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF59E0",
+   "ordinal": null,
+   "name": "CODEC_RemapDccCodebooks",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCodecByteSpan *pCodebooks, const uint8_t *pInverseMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 38,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5A10",
+   "ordinal": null,
+   "name": "CODEC_InitCriticalSection",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 31,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5A30",
+   "ordinal": null,
+   "name": "CODEC_ShutdownCriticalSection",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 42,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5A60",
+   "ordinal": null,
+   "name": "COUNT_CountConsecutiveFirst",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(const uint8_t *pSrc, const uint8_t *pEnd, int32_t nMaxCount, int32_t *pbCountEqualsDist, int32_t *pbIsRemainingSame)",
+   "source_file": "Count.cpp",
+   "asserts": [
+    "pSrc < pEnd"
+   ],
+   "size": 129,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5AF0",
+   "ordinal": null,
+   "name": "COUNT_CountConsecutive",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(uint8_t bValue, const uint8_t *pSrc, const uint8_t *pEnd, int32_t nMaxCount, int32_t *pbCountEqualsDist, int32_t *pbIsRemainingSame)",
+   "source_file": "Count.cpp",
+   "asserts": [
+    "pSrc < pEnd"
+   ],
+   "size": 127,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5B70",
+   "ordinal": null,
+   "name": "COUNT_CountConsecutiveDiff",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(const uint8_t *pSrc, const uint8_t *pEnd, uint8_t bValue, int32_t nMaxCount, int32_t *pbCountEqualsDist, int32_t *pbIsRemainingSame)",
+   "source_file": "Count.cpp",
+   "asserts": [
+    "pSrc < pEnd"
+   ],
+   "size": 131,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5C00",
+   "ordinal": null,
+   "name": "_DllMain@12",
+   "demangled": null,
+   "prototype": "BOOL __stdcall(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)",
+   "source_file": null,
+   "asserts": null,
+   "size": 8,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5C10",
+   "ordinal": null,
+   "name": "FASTCMP_EncodeIndexedCellFrames",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCellBuilder *pBuilder, D2CmpBuiltCellFile *pOutput)",
+   "source_file": "FastCmp.cpp",
+   "asserts": [
+    "!( pList->dwFlags & CELFILE_24BIT )"
+   ],
+   "size": 329,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5D60",
+   "ordinal": null,
+   "name": "FASTCMP_EncodeDC6RlePixels",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pPixels, int32_t nPixelWidth, uint32_t nPixelHeight, uint8_t nOrientationFlags, uint8_t **ppEncoded, uint32_t *pnEncodedBytes)",
+   "source_file": "FastCmp.cpp",
+   "asserts": null,
+   "size": 247,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5E60",
+   "ordinal": null,
+   "name": "FASTCMP_TransformDC6PaletteInPlace",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpRleCellHeader *pCell, const uint8_t *pPaletteMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 51,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF5EA0",
+   "ordinal": null,
+   "name": "FASTCMP_ConvertRGB24CellFramesToIndexed",
+   "demangled": null,
+   "prototype": "void __fastcall(const D2CmpBuiltCellFile *pSrc, D2CmpBuiltCellFile *pDst, uint8_t (__stdcall *pfMapRgbToIndex)(uint8_t nRed, uint8_t nGreen, uint8_t nBlue), uint32_t dwTransparentColor)",
+   "source_file": "FastCmp.cpp",
+   "asserts": [
+    "pSrc->dwFlags & CELFILE_24BIT",
+    "bTemp"
+   ],
+   "size": 467,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6080",
+   "ordinal": null,
+   "name": "FASTCMP_DC6CopyClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight)",
+   "source_file": null,
+   "asserts": null,
+   "size": 164,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6130",
+   "ordinal": null,
+   "name": "FASTCMP_DC6MapBlend",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pPaletteMap, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 574,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6390",
+   "ordinal": null,
+   "name": "FASTCMP_DC6MapBlendClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pPaletteMap, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 732,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6690",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMapMap",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pPaletteMap, const uint8_t *pPreMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 381,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6830",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMapMapClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pPaletteMap, const uint8_t *pPreMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 518,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6A60",
+   "ordinal": null,
+   "name": "FASTCMP_DC6Map",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pPaletteMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 279,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6BA0",
+   "ordinal": null,
+   "name": "FASTCMP_DC6MapClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pPaletteMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 420,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6D70",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMapBlend",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pPreMap, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 574,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF6FD0",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMapBlendClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pPreMap, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 732,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF72D0",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMap",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pPreMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 279,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF7410",
+   "ordinal": null,
+   "name": "FASTCMP_DC6PreMapClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pPreMap)",
+   "source_file": null,
+   "asserts": null,
+   "size": 420,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF75E0",
+   "ordinal": null,
+   "name": "FASTCMP_DC6Blend",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 479,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF77E0",
+   "ordinal": null,
+   "name": "FASTCMP_DC6BlendClipped",
+   "demangled": null,
+   "prototype": "void __fastcall(const uint8_t *pRle, uint8_t *pDst, int32_t nLinesToDraw, int32_t nRowStep, int32_t nX, int32_t nClipLeft, int32_t nClipRight, const uint8_t *pBlendTable)",
+   "source_file": null,
+   "asserts": null,
+   "size": 630,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF7A80",
+   "ordinal": 10049,
+   "name": "FASTCMP_ToggleCelDrawMode",
+   "demangled": null,
+   "prototype": "int32_t __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 19,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF7AA0",
+   "ordinal": null,
+   "name": "FASTCMP_DrawDC6",
+   "demangled": null,
+   "prototype": "void __fastcall(const D2CmpRleCellHeader *pCel, uint8_t *pDst, int32_t nX, int32_t nClipLeft, int32_t nClipRight, uint32_t dwStride, int32_t nLinesToSkip, int32_t nLinesToDraw, const uint8_t *pPaletteMap, const uint8_t *pBlendTable, const uint8_t *pPreMap)",
+   "source_file": "FastCmp.cpp",
+   "asserts": [
+    "dwStride >= pCel->dwWidth",
+    "nLinesToSkip + nLinesToDraw <= (int)pCel->dwHeight"
+   ],
+   "size": 1283,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF7FB0",
+   "ordinal": 10048,
+   "name": "FASTCMP_CmpDoLensEffect",
+   "demangled": null,
+   "prototype": "void __stdcall(uint8_t *pPixels, int32_t nPitch)",
+   "source_file": null,
+   "asserts": null,
+   "size": 322,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8100",
+   "ordinal": null,
+   "name": "FASTCMP_DrawDC6Shadow",
+   "demangled": null,
+   "prototype": "void __fastcall(const D2CmpRleCellHeader *pCel, uint8_t *pDst, int32_t nX, int32_t nClipLeft, int32_t nClipRight, uint32_t dwStride, int32_t nLinesToSkip, int32_t nLinesToDraw, const uint8_t *pBlendTable, uint8_t nShadowColor)",
+   "source_file": "FastCmp.cpp",
+   "asserts": [
+    "dwStride >= pCel->dwWidth"
+   ],
+   "size": 402,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF82A0",
+   "ordinal": null,
+   "name": "FINDTILES_AllocHash",
+   "demangled": null,
+   "prototype": "D2TileLibraryHashStrc *__cdecl()",
+   "source_file": "FindTiles.cpp",
+   "asserts": [
+    "ptHash"
+   ],
+   "size": 68,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF82F0",
+   "ordinal": null,
+   "name": "FINDTILES_FreeHash",
+   "demangled": null,
+   "prototype": "void __fastcall(D2TileLibraryHashStrc *pHash)",
+   "source_file": "FindTiles.cpp",
+   "asserts": null,
+   "size": 131,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8380",
+   "ordinal": null,
+   "name": "FINDTILES_AddTile",
+   "demangled": null,
+   "prototype": "void __fastcall(D2TileLibraryHashStrc *ptHash, D2TileLibraryEntryStrc *ptTile)",
+   "source_file": "FindTiles.cpp",
+   "asserts": [
+    "ptHash",
+    "ptTile",
+    "tKey < FIND_TILE_HASH_SIZE",
+    "ptKeyNode",
+    "ptTileRef",
+    "ptRef"
+   ],
+   "size": 492,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8570",
+   "ordinal": null,
+   "name": "FINDTILES_CollectTiles",
+   "demangled": null,
+   "prototype": "uint32_t __fastcall(D2TileLibraryHashStrc *ptHash, D2TileLibraryEntryStrc **hTileList, uint32_t nCapacity, int32_t nType, int32_t nStyle, int32_t nSequence)",
+   "source_file": "FindTiles.cpp",
+   "asserts": [
+    "ptHash",
+    "hTileList",
+    "tKey < FIND_TILE_HASH_SIZE"
+   ],
+   "size": 278,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8690",
+   "ordinal": null,
+   "name": "GFXHASH_ClearStorage",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteGfxHashStorage *pHashStorage)",
+   "source_file": null,
+   "asserts": null,
+   "size": 14,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF86A0",
+   "ordinal": null,
+   "name": "GFXHASH_FindEntry",
+   "demangled": null,
+   "prototype": "D2CmpSpriteGfxHashEntryPrefix *__fastcall(D2CmpSpriteGfxHashStorage *pHash, D2GfxDataStrc *ptCelContext, uint32_t *pDirBlock, uint32_t *pDirectionsPerBlock, D2CmpSpriteHeaderData *pHeader)",
+   "source_file": null,
+   "asserts": null,
+   "size": 210,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8780",
+   "ordinal": null,
+   "name": "GFXHASH_GetBucket",
+   "demangled": null,
+   "prototype": "uint32_t __fastcall(D2GfxDataStrc *ptCelContext, D2CmpSpriteHeaderData *pHeader, uint32_t *pDirBlock, uint32_t *pDirectionsPerBlock)",
+   "source_file": "GfxHash.cpp",
+   "asserts": [
+    "ptCelContext->tUnitInfo.pszFileName"
+   ],
+   "size": 162,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8830",
+   "ordinal": null,
+   "name": "GFXHASH_NewEntry",
+   "demangled": null,
+   "prototype": "D2CmpSpriteGfxHashEntryPrefix *__fastcall(void *pPool, D2CmpSpriteGfxHashStorage *pHash, D2CmpSpriteGfxNodePrefix *pGfxNode, D2GfxDataStrc *ptCelContext, D2CmpSpriteHeaderData *pHeader)",
+   "source_file": "GfxHash.cpp",
+   "asserts": null,
+   "size": 179,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF88F0",
+   "ordinal": null,
+   "name": "GFXHASH_DeleteEntry",
+   "demangled": null,
+   "prototype": "void __fastcall(void *pPool, D2CmpSpriteGfxHashStorage *pHash, D2CmpSpriteGfxHashEntryPrefix *ptElement)",
+   "source_file": "GfxHash.cpp",
+   "asserts": [
+    "ptElement",
+    "lpbData"
+   ],
+   "size": 354,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8A60",
+   "ordinal": null,
+   "name": "GFXHASH_GetDirectionBlock",
+   "demangled": null,
+   "prototype": "uint32_t __fastcall(D2GfxDataStrc *ptCelContext, uint32_t *pDirectionsPerBlock, D2CmpSpriteHeaderData *pHeader)",
+   "source_file": null,
+   "asserts": null,
+   "size": 199,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8B30",
+   "ordinal": null,
+   "name": "LRUCACHE_Init",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruCache *pCache, void *pPool, uint32_t dwMaxAllocated, void (__fastcall *pfnOnEvict)(D2CmpLruEntry *), uint32_t nEntries)",
+   "source_file": "LRUCache.cpp",
+   "asserts": null,
+   "size": 187,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8BF0",
+   "ordinal": null,
+   "name": "LRUCACHE_Destroy",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruCache *pCache)",
+   "source_file": "LRUCache.cpp",
+   "asserts": null,
+   "size": 58,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8C30",
+   "ordinal": null,
+   "name": "LRUCACHE_AllocEntry",
+   "demangled": null,
+   "prototype": "D2CmpLruEntry *__fastcall(D2CmpLruCache *pCache, uint32_t dwSize, void *pUserData)",
+   "source_file": "LRUCache.cpp",
+   "asserts": [
+    "dwSize < ptCache->dwMaxAllocated",
+    "ptBlock",
+    "ptBlock->lpData"
+   ],
+   "size": 388,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8DC0",
+   "ordinal": null,
+   "name": "LRUCACHE_EvictEntry",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruCache *pCache, D2CmpLruEntry *pEntry)",
+   "source_file": "LRUCache.cpp",
+   "asserts": null,
+   "size": 240,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8EB0",
+   "ordinal": null,
+   "name": "LRUCACHE_TouchEntry",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruCache *pCache, D2CmpLruEntry *pEntry)",
+   "source_file": "LRUCache.cpp",
+   "asserts": [
+    "ptBlock"
+   ],
+   "size": 172,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8F60",
+   "ordinal": 10003,
+   "name": "PALETTE_UpdateD2TransparencyTable",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpPaletteTables *pTables, int32_t nUnused)",
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF8F70",
+   "ordinal": null,
+   "name": "PALETTE_BuildAdditiveTable",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 354,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF90E0",
+   "ordinal": 10000,
+   "name": "PALETTE_CreateD2Palette",
+   "demangled": null,
+   "prototype": "D2CmpPaletteTables *__stdcall(const D2CmpPaletteEntry *pPalette)",
+   "source_file": "Palette.cpp",
+   "asserts": [
+    "dHue >= 0.0f && dHue < 360.0f",
+    "dSat >= 0.0f && dSat <= 1.0f",
+    "dLum >= 0.0f && dLum <= 1.0f"
+   ],
+   "size": 1248,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF95C0",
+   "ordinal": null,
+   "name": "PALETTE_BuildMultiplyTable",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 373,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF9740",
+   "ordinal": null,
+   "name": "PALETTE_BuildDarkenAndDarkBlend",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 788,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF9A60",
+   "ordinal": null,
+   "name": "PALETTE_BuildStandardShifts",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 358,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF9BD0",
+   "ordinal": null,
+   "name": "PALETTE_BuildBrightenTables",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 325,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDF9D20",
+   "ordinal": null,
+   "name": "PALETTE_BuildColorShiftTables",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables, const D2CmpHSL *pSourceHSL)",
+   "source_file": null,
+   "asserts": null,
+   "size": 2632,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFA770",
+   "ordinal": null,
+   "name": "PALETTE_HSLToRGB256",
+   "demangled": null,
+   "prototype": "void __fastcall(const D2CmpHSL *pHSL, D2CmpPaletteEntry *pRGB)",
+   "source_file": null,
+   "asserts": null,
+   "size": 611,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFA9E0",
+   "ordinal": null,
+   "name": "PALETTE_BuildLuminanceTable",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpPaletteTables *pTables, D2CmpHSL *pHSL)",
+   "source_file": null,
+   "asserts": null,
+   "size": 269,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAAF0",
+   "ordinal": 10001,
+   "name": "PALETTE_CreateD2PaletteByteStream",
+   "demangled": null,
+   "prototype": "D2CmpPaletteTables *__stdcall(const D2CmpPaletteEntry *pPalette, uint32_t *pdwSize)",
+   "source_file": null,
+   "asserts": null,
+   "size": 23,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAB10",
+   "ordinal": 10002,
+   "name": "PALETTE_DestroyD2Palette",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpPaletteTables *pTables)",
+   "source_file": null,
+   "asserts": null,
+   "size": 16,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAB20",
+   "ordinal": 10004,
+   "name": "PALETTE_GetClosestColor",
+   "demangled": null,
+   "prototype": "uint8_t __stdcall(const D2CmpPaletteEntry *pPalette, uint32_t nColors, int32_t nRed, int32_t nGreen, int32_t nBlue)",
+   "source_file": null,
+   "asserts": null,
+   "size": 116,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFABA0",
+   "ordinal": 10005,
+   "name": "PALETTE_GetFurthestColor",
+   "demangled": null,
+   "prototype": "uint8_t __stdcall(const D2CmpPaletteEntry *pPalette, uint32_t nColors, int32_t nRed, int32_t nGreen, int32_t nBlue)",
+   "source_file": null,
+   "asserts": null,
+   "size": 115,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAC20",
+   "ordinal": 10009,
+   "name": "PALETTE_PaletteSetTransparency",
+   "demangled": null,
+   "prototype": "void __stdcall(uint32_t dwColor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAC50",
+   "ordinal": 10006,
+   "name": "PALETTE_PaletteInit",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const char *pszPalette, int32_t nPaletteStartEntry, int32_t nPaletteEndEntry)",
+   "source_file": "Palette.cpp",
+   "asserts": [
+    "pszPalette != NULL",
+    "PaletteStartEntry <= PaletteEndEntry",
+    "PaletteStartEntry >= 0",
+    "PaletteEndEntry < NUMBER_PALETTE_ENTRIES",
+    "Unable to open",
+    "Unable to extract palette from",
+    "File is not a valid 256-color PCX file."
+   ],
+   "size": 881,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAFD0",
+   "ordinal": 10010,
+   "name": "PALETTE_PaletteTestBackground",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t bTestBackground)",
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFAFE0",
+   "ordinal": 10007,
+   "name": "PALETTE_Palette24BitTo8BitPixel",
+   "demangled": null,
+   "prototype": "uint8_t __stdcall(uint8_t nBlue, uint8_t nGreen, uint8_t nRed)",
+   "source_file": null,
+   "asserts": null,
+   "size": 230,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB0D0",
+   "ordinal": 10008,
+   "name": "PALETTE_Palette24BitTo8BitImage",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(const uint8_t *pSource, uint8_t *pDest, uint32_t nPixels, uint8_t (__stdcall *pfnConvert)(uint8_t, uint8_t, uint8_t))",
+   "source_file": null,
+   "asserts": null,
+   "size": 145,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB170",
+   "ordinal": 10011,
+   "name": "PALETTE_PaletteFixBlack",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t bFixBlack)",
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB180",
+   "ordinal": 10012,
+   "name": "PALETTE_PaletteSetMask",
+   "demangled": null,
+   "prototype": "void __stdcall(const uint8_t *pMask)",
+   "source_file": null,
+   "asserts": null,
+   "size": 33,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB1B0",
+   "ordinal": 10096,
+   "name": "PALSHIFT_PalShiftInit",
+   "demangled": null,
+   "prototype": "void __stdcall()",
+   "source_file": "PalShift.cpp",
+   "asserts": [
+    "Data\\Global\\Items\\Palette\\",
+    "invgrey2",
+    "invgreybrown"
+   ],
+   "size": 1039,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB5C0",
+   "ordinal": null,
+   "name": "PALSHIFT_LoadItemPaletteGroup",
+   "demangled": null,
+   "prototype": "void __fastcall(const char *szBaseName, int32_t nGroupIndex)",
+   "source_file": "PalShift.cpp",
+   "asserts": [
+    "Data\\Global\\Items\\Palette\\"
+   ],
+   "size": 376,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB740",
+   "ordinal": 10097,
+   "name": "PALSHIFT_PalShiftSetAct",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t nAct)",
+   "source_file": null,
+   "asserts": null,
+   "size": 21,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB760",
+   "ordinal": 10098,
+   "name": "PALSHIFT_PalShiftGetTransform",
+   "demangled": null,
+   "prototype": "uint8_t *__stdcall(int32_t nTransform, int32_t nColor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 65,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB7B0",
+   "ordinal": null,
+   "name": "RAW_EncodeRGB24CellFrames",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpCellBuilder *pBuilder, D2CmpBuiltCellFile *pOutput)",
+   "source_file": "Raw.cpp",
+   "asserts": null,
+   "size": 241,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB8B0",
+   "ordinal": null,
+   "name": "RAW_Rgb24Frame_VisitNonTransparentColors",
+   "demangled": null,
+   "prototype": "void __fastcall(const D2CmpRgb24FrameHeader *pFrame, D2CmpPackedColorCallback pVisitColor, uint32_t dwTransparentColor)",
+   "source_file": null,
+   "asserts": null,
+   "size": 122,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB930",
+   "ordinal": 10051,
+   "name": "SPRITECACHE_GetGfxFileExtension",
+   "demangled": null,
+   "prototype": "const char *__stdcall(int32_t bAllowCompressed)",
+   "source_file": null,
+   "asserts": null,
+   "size": 30,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB950",
+   "ordinal": 10050,
+   "name": "SPRITECACHE_BuildFileName",
+   "demangled": null,
+   "prototype": "void __stdcall(char *Buffer, int32_t bAllowCompressed, const char *Format, va_list ArgList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 98,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB9C0",
+   "ordinal": 10054,
+   "name": "SPRITECACHE_SetNoCompress",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t bAllowCompressedMode)",
+   "source_file": null,
+   "asserts": [
+    "CompressedData",
+    "Diablo II"
+   ],
+   "size": 43,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFB9F0",
+   "ordinal": 10052,
+   "name": "SPRITECACHE_SpriteCacheInit",
+   "demangled": null,
+   "prototype": "void __stdcall(void *pPool, int32_t nSpriteCacheBytes, int32_t nCelHeaderCacheBytes, uint32_t dwMemoryOverride)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "pSysInfo != NULL",
+    "FALSE",
+    "Low End Machine: %s",
+    "D2CMPSpriteCacheInit: %d"
+   ],
+   "size": 371,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFBB70",
+   "ordinal": null,
+   "name": "SPRITECACHE_OnDataEvict",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteGfxHashEntryPrefix *pElement)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptGfxNode"
+   ],
+   "size": 82,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFBBD0",
+   "ordinal": null,
+   "name": "SPRITECACHE_OnHeaderEvict",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruEntry *pEntry)",
+   "source_file": null,
+   "asserts": null,
+   "size": 28,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFBBF0",
+   "ordinal": 10053,
+   "name": "SPRITECACHE_SpriteCacheDestroy",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t bFreeCaches)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": null,
+   "size": 180,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFBCB0",
+   "ordinal": null,
+   "name": "SPRITECACHE_RunDecodeJob",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(void *pInput, uint32_t dwInputBytes, D2CmpSpriteDecodeJobPrefix *pJob)",
+   "source_file": null,
+   "asserts": null,
+   "size": 142,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFBD40",
+   "ordinal": 10055,
+   "name": "SPRITECACHE_SpriteValidate",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2GfxDataStrc *pContext, int32_t bAsyncWait, int32_t bAsyncLoad)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptBlock",
+    "(ptCelContext->dwCel < ptGfxBlock->bNumCelsPerDir)",
+    "SpriteCache.cpp:sFindCel()  (nDirection >= (int)ptGfxBlock->bNumOffsets - 1)",
+    "SpriteCache.cpp:sFindCel()  (nOffset < 0)",
+    "SpriteCache.cpp:sFindCel()  (ptCel->dwFlags != 0)",
+    "SpriteCache.cpp:sFindCel():2  (nOffset < 0)",
+    "SpriteCache.cpp:sFindCel()  (ptCel->dwWidth > 256 || ptCel->dwHeight > 256)",
+    "Couldn't get cel handle in for:%s  TYPE:%d  CLASS:%d  MODE:%d  FILE:%s  LINE:%d"
+   ],
+   "size": 1211,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFC200",
+   "ordinal": null,
+   "name": "SPRITECACHE_BuildFilePath",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2GfxDataStrc *pContext, char *szPath, const char *szKey)",
+   "source_file": null,
+   "asserts": [
+    "OYTRlitTNhth",
+    "DATA\\GLOBAL\\OBJECTS",
+    "DATA\\GLOBAL\\MONSTERS",
+    "DATA\\GLOBAL\\CHARS",
+    "%s\\%s\\%s\\%s.dcc",
+    "%s\\%s\\%s\\%s.dc6",
+    "DATA\\GLOBAL\\OVERLAYS",
+    "%s\\%s.dcc",
+    "DATA\\GLOBAL",
+    "%s\\items\\%s.dc6"
+   ],
+   "size": 633,
+   "callers": 7,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFC530",
+   "ordinal": null,
+   "name": "SPRITECACHE_ResolveHeader",
+   "demangled": null,
+   "prototype": "D2CmpSpriteHeaderData *__fastcall(D2GfxDataStrc *pContext, char *szPath, char *szKey)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptHashTableElement",
+    "ptHashTableElement->lpBlock",
+    "[sValidateCelData] ptCelData was NULL.",
+    "dwTotalCels < OFFSET_ARRAYSIZE",
+    "ptCelData->tHeader.dwNumDirections < MAX_DIROFFSETS"
+   ],
+   "size": 583,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFC780",
+   "ordinal": null,
+   "name": "SPRITECACHE_BuildHeaderKey",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2GfxDataStrc *pContext, char *szKey)",
+   "source_file": null,
+   "asserts": null,
+   "size": 487,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFCA30",
+   "ordinal": null,
+   "name": "SPRITECACHE_InitializeHardwareSlots",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteHeaderData *ptCelData, D2GfxDataStrc *ptCelContext, D2CmpSpriteGfxNodePrefix *ptGfxNode)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptCelContext",
+    "ptGfxNode",
+    "!(ptCelData->bFlags & CELDATAFLAG_NOFILE)",
+    "!ptGfxBlock->fHardwareCelData",
+    "lpbData",
+    "[sInitializeHardwareCelData] There offsets are screwed for the Cel File:\n\n%s"
+   ],
+   "size": 475,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFCC10",
+   "ordinal": null,
+   "name": "SPRITECACHE_LoadDirectionBlockSync",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2GfxDataStrc *pContext, D2CmpSpriteHeaderData *pHeader, uint32_t dwDirBlock, uint32_t dwDirectionsPerBlock, const char *szPath)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "[sValidateSynchLoadDirectionBlock] There are differences between the CEL Data and the Cel File: %s",
+    "ptHashTableElement",
+    "i < MAX_DIROFFSETS",
+    "ptGfxNode->tGfxBlock.nOffsets[i] >= 0",
+    "ptGfxNode->tGfxBlock.lpAsyncData",
+    "Couldn't get cel handle in for:%s  FILE:%s  LINE:%d"
+   ],
+   "size": 1027,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD020",
+   "ordinal": null,
+   "name": "SPRITECACHE_FindFrame",
+   "demangled": null,
+   "prototype": "D2CmpSpriteFrameHeaderPrefix *__fastcall(D2GfxDataStrc *ptCelContext, D2CmpSpriteGfxBlockPrefix *ptGfxBlock, uint8_t *pBuffer)",
+   "source_file": null,
+   "asserts": [
+    "(ptCelContext->dwCel < ptGfxBlock->bNumCelsPerDir)",
+    "SpriteCache.cpp:sFindCel()  (nDirection >= (int)ptGfxBlock->bNumOffsets - 1)",
+    "SpriteCache.cpp:sFindCel()  (nOffset < 0)",
+    "SpriteCache.cpp:sFindCel()  (ptCel->dwFlags != 0)",
+    "SpriteCache.cpp:sFindCel():2  (nOffset < 0)",
+    "SpriteCache.cpp:sFindCel()  (ptCel->dwWidth > 256 || ptCel->dwHeight > 256)"
+   ],
+   "size": 316,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD160",
+   "ordinal": null,
+   "name": "SPRITECACHE_PrefetchSecondDirectionBlock",
+   "demangled": null,
+   "prototype": "void __fastcall(D2GfxDataStrc *pContext, uint32_t dwDirBlock, uint32_t dwDirBlockSize, D2CmpSpriteHeaderData *pHeader, char *szKey, char *szPath, int32_t bAsyncLoad)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "dwDirBlock == 1",
+    "dwDirBlockSize > 1"
+   ],
+   "size": 355,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD2D0",
+   "ordinal": null,
+   "name": "SPRITECACHE_LoadDirectionBlockAsync",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(D2GfxDataStrc *pContext, D2CmpSpriteHeaderData *pHeader, uint32_t dwDirBlock, uint32_t dwDirectionsPerBlock, const char *szPath)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "dwSize",
+    "!ptGfxNode->tGfxBlock.lpAsyncData",
+    "i < MAX_DIROFFSETS",
+    "ptGfxNode->tGfxBlock.nOffsets[i] >= 0",
+    "ptHashTableElement"
+   ],
+   "size": 810,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD600",
+   "ordinal": 10056,
+   "name": "SPRITECACHE_SpriteRequest",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2GfxDataStrc *ptCelContext)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptCelContext",
+    "ptHashTableElement",
+    "dwDirBlock == 0"
+   ],
+   "size": 456,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD7D0",
+   "ordinal": 10059,
+   "name": "SPRITECACHE_SpriteCacheDumpHashTableStats",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 10,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD7E0",
+   "ordinal": 10060,
+   "name": "SPRITECACHE_SpriteCacheGetUsedMemory",
+   "demangled": null,
+   "prototype": "uint32_t __cdecl()",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "sgtGfxCache.pcs"
+   ],
+   "size": 69,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD830",
+   "ordinal": 10061,
+   "name": "SPRITECACHE_SpriteCacheGetMaxMemory",
+   "demangled": null,
+   "prototype": "uint32_t __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD840",
+   "ordinal": 10062,
+   "name": "SPRITECACHE_CelDataCacheDumpHashTableStats",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 10,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD850",
+   "ordinal": 10063,
+   "name": "SPRITECACHE_CelDataCacheGetUsedMemory",
+   "demangled": null,
+   "prototype": "uint32_t __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD860",
+   "ordinal": 10064,
+   "name": "SPRITECACHE_CelDataCacheGetMaxMemory",
+   "demangled": null,
+   "prototype": "uint32_t __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD870",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_Init",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteDataCache *pCache, void *pPool, int32_t nCacheBytes, void (__fastcall *pfnOnEvict)(void *))",
+   "source_file": "SpriteCache.cpp",
+   "asserts": null,
+   "size": 198,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFD940",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_AllocateNode",
+   "demangled": null,
+   "prototype": "D2CmpSpriteDataNode *__fastcall(D2CmpSpriteDataCache *ptCache, uint32_t dwSize, void *pUserData, int32_t bQueue1)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "dwSize < ptCache->dwMaxAllocated",
+    "ptBlock",
+    "SpriteCacheBlockNew: SpriteCacheBlockFree failed"
+   ],
+   "size": 600,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDBA0",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_EvictNode",
+   "demangled": null,
+   "prototype": "D2CmpSpriteDataNode *__fastcall(D2CmpSpriteDataCache *pCache, D2CmpSpriteDataNode *pNode, int32_t bAllowQueue1)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": null,
+   "size": 256,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDCA0",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_AddNodeBytes",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteDataCache *pCache, D2CmpSpriteDataNode *ptBlock, uint32_t dwDeltaBytes, int32_t bAllowQueue1)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptFreedBlock != ptBlock"
+   ],
+   "size": 190,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDD60",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_AppendQueuedNode",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteDataCache *pCache, D2CmpSpriteDataNode *pNode, int32_t bQueue1)",
+   "source_file": null,
+   "asserts": null,
+   "size": 113,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDDE0",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_PopQueueHead",
+   "demangled": null,
+   "prototype": "D2CmpSpriteDataNode *__fastcall(D2CmpSpriteDataCache *pCache, int32_t bQueue1)",
+   "source_file": null,
+   "asserts": null,
+   "size": 124,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDE60",
+   "ordinal": null,
+   "name": "SPRITECACHE_SpriteDataCache_DetachQueuedNode",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpSpriteDataCache *pCache, D2CmpSpriteDataNode *ptBlock)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "ptBlock"
+   ],
+   "size": 167,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDF10",
+   "ordinal": 10057,
+   "name": "SPRITECACHE_SpriteNumAsyncLoads",
+   "demangled": null,
+   "prototype": "int32_t __cdecl()",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "hAsyncData"
+   ],
+   "size": 90,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFDF70",
+   "ordinal": 10058,
+   "name": "SPRITECACHE_SpriteFindAsynchSiblings",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(int32_t nUnitType, int32_t nMode, int32_t nUnitIndex)",
+   "source_file": "SpriteCache.cpp",
+   "asserts": [
+    "hAsyncData"
+   ],
+   "size": 131,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE000",
+   "ordinal": 10099,
+   "name": "SPRITECACHE_SpriteFreeAsyncLoads",
+   "demangled": null,
+   "prototype": "void __stdcall()",
+   "source_file": null,
+   "asserts": null,
+   "size": 68,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE050",
+   "ordinal": null,
+   "name": "SUBTILE_EncodeSquareRle",
+   "demangled": null,
+   "prototype": "uint8_t *__fastcall(const uint8_t *pPixels, uint32_t *pEncodedBytes)",
+   "source_file": "SubTile.cpp",
+   "asserts": null,
+   "size": 224,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE130",
+   "ordinal": null,
+   "name": "SUBTILE_ConvertRGB24ToIndexed",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpTileRuntimeComponent *ptComp8, const D2CmpTileRuntimeComponent *ptComp24, uint32_t dwTransparentColor, uint8_t (__stdcall *pfnMapColor)(uint8_t nByte0, uint8_t nByte1, uint8_t nByte2))",
+   "source_file": "SubTile.cpp",
+   "asserts": [
+    "ptComp8",
+    "ptComp24",
+    "ptComp24->ptData",
+    "nSize",
+    "nSize < 0x00010000",
+    "ptComp8->ptData",
+    "bColor"
+   ],
+   "size": 437,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE2F0",
+   "ordinal": null,
+   "name": "SUBTILE_CompressIsometric",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpTileRuntimeComponent *pComponent)",
+   "source_file": "SubTile.cpp",
+   "asserts": null,
+   "size": 123,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE370",
+   "ordinal": null,
+   "name": "SUBTILE_EncodeIsometricRle",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpTileRuntimeComponent *pComponent, const uint8_t *pPixels)",
+   "source_file": "SubTile.cpp",
+   "asserts": [
+    "ptDestBuffer",
+    "nSize < 0x00010000",
+    "ptNewData"
+   ],
+   "size": 439,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE530",
+   "ordinal": null,
+   "name": "SUBTILE_PackOpaqueIsometric",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpTileRuntimeComponent *pComponent, const uint8_t *pPixels)",
+   "source_file": "SubTile.cpp",
+   "asserts": [
+    "ptSquished"
+   ],
+   "size": 203,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE600",
+   "ordinal": 10089,
+   "name": "TILECACHE_TileCacheInit",
+   "demangled": null,
+   "prototype": "void __stdcall(void *pPool, uint32_t dwCacheBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 64,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE640",
+   "ordinal": 10090,
+   "name": "TILECACHE_TileCacheDestroy",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t bFreeCache)",
+   "source_file": null,
+   "asserts": null,
+   "size": 64,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE680",
+   "ordinal": null,
+   "name": "TILECACHE_OnEvict",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpLruEntry *pEntry)",
+   "source_file": "TileCache.cpp",
+   "asserts": [
+    "sgpfnHardwareFreeCallback"
+   ],
+   "size": 78,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE6D0",
+   "ordinal": 10091,
+   "name": "TILECACHE_TileValidate",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *pTile, int32_t nUnused0, int32_t nUnused1)",
+   "source_file": null,
+   "asserts": null,
+   "size": 176,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE780",
+   "ordinal": null,
+   "name": "TILECACHE_GetProjectAllocationSize",
+   "demangled": null,
+   "prototype": "uint32_t __fastcall(const char *szFileName)",
+   "source_file": null,
+   "asserts": null,
+   "size": 90,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE7E0",
+   "ordinal": null,
+   "name": "TILECACHE_SetHardwareFreeCallback",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpTileHardwareFreeCallback pfnCallback)",
+   "source_file": null,
+   "asserts": null,
+   "size": 7,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE7F0",
+   "ordinal": 10092,
+   "name": "TILECACHE_GetTileCacheHits",
+   "demangled": null,
+   "prototype": "void __stdcall(uint32_t *pConfiguredBytes, uint32_t *pAllocRequests, uint32_t *pAccessRequests, uint32_t *pPercentAllocated)",
+   "source_file": null,
+   "asserts": null,
+   "size": 85,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE850",
+   "ordinal": 10093,
+   "name": "TILECACHE_ResetTileCacheHits",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 13,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE860",
+   "ordinal": 10102,
+   "name": "TILECACHE_TileFreeAsyncLoads",
+   "demangled": null,
+   "prototype": "void __stdcall()",
+   "source_file": null,
+   "asserts": null,
+   "size": 10,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE870",
+   "ordinal": null,
+   "name": "TILECACHE_DetachProjectTiles",
+   "demangled": null,
+   "prototype": "void __fastcall(D2CmpNormalizedTileProject *pProject)",
+   "source_file": null,
+   "asserts": null,
+   "size": 72,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE8C0",
+   "ordinal": 10105,
+   "name": "TILECACHE_10105",
+   "demangled": null,
+   "prototype": "void __stdcall(int32_t nUnused1, int32_t nUnused2)",
+   "source_file": null,
+   "asserts": null,
+   "size": 3,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE8D0",
+   "ordinal": 10065,
+   "name": "TILECMP_TileListCreate",
+   "demangled": null,
+   "prototype": "D2CmpTileList *__stdcall(int32_t b24Bit, uint32_t dwTransparentRGB24)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptList"
+   ],
+   "size": 81,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE930",
+   "ordinal": 10066,
+   "name": "TILECMP_TileListDestroy",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpTileList *pList)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptList"
+   ],
+   "size": 155,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFE9D0",
+   "ordinal": 10067,
+   "name": "TILECMP_TileListAddTile",
+   "demangled": null,
+   "prototype": "D2CmpTileBuilder *__stdcall(D2CmpTileList *pList, uint16_t nFlags, uint16_t nRoofHeight, int32_t nType, int32_t nStyle, int32_t nSequence, int32_t nRarity_Frame, int32_t nLightDirection, const uint8_t *pSubtileFlags)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptList",
+    "ptTile"
+   ],
+   "size": 204,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFEAA0",
+   "ordinal": 10068,
+   "name": "TILECMP_TileAddAddSubTile",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpTileBuilder *pTile, const uint8_t *pImage, int32_t nImageStride, int32_t nOffsetX, int32_t nOffsetY)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "hTileAdd",
+    "ptImage",
+    "ptComp",
+    "ptData",
+    "nOffsetX < 0x00010000 && nOffsetY < 0x00010000"
+   ],
+   "size": 520,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFECB0",
+   "ordinal": 10069,
+   "name": "TILECMP_TileAddAddFloorTile",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpTileBuilder *pTile, const uint8_t *pImage)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptTileAdd",
+    "ptImage",
+    "ptSquare",
+    "ptComp"
+   ],
+   "size": 679,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFEF60",
+   "ordinal": 10070,
+   "name": "TILECMP_TileListCreateProject",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2CmpTileList *pTileList, D2CmpNormalizedTileProject **ppProject)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptTileList",
+    "ptProject",
+    "ptProject->ptTileArray",
+    "nTile == ptProject->nNumTiles",
+    "ptTile->ptCompArray",
+    "nTileComp == ptTile->nCompCount"
+   ],
+   "size": 699,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF220",
+   "ordinal": 10073,
+   "name": "TILECMP_TileProjectDestroy",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpNormalizedTileProject *pProject, int32_t nKeepProject)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject",
+    "!(ptProject->dwFlags & TILEPROJECT_FEWBLOCKS)"
+   ],
+   "size": 348,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF380",
+   "ordinal": 10071,
+   "name": "TILECMP_TileProjectSerialize",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpNormalizedTileProject *pProject, D2TileLibraryHeaderStrc **pptData, uint32_t *pnSize)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject",
+    "ptptData",
+    "ptnSize",
+    "ptProject->nNumTiles",
+    "nSize",
+    "ptData"
+   ],
+   "size": 738,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF670",
+   "ordinal": 10072,
+   "name": "TILECMP_TileProjectNormalize",
+   "demangled": null,
+   "prototype": "void __stdcall(D2TileLibraryHeaderStrc *pSerializedProject, D2CmpNormalizedTileProject **ppProject, const char *szFileName)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject->dwVersion == TILEPROJECT_VERSION"
+   ],
+   "size": 269,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF780",
+   "ordinal": null,
+   "name": "TILECMP_NormalizeProject",
+   "demangled": null,
+   "prototype": "void __stdcall(D2TileLibraryHeaderStrc *pSerializedProject, D2CmpNormalizedTileProject **ppProject, const char *szFileName)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject->dwVersion == TILEPROJECT_VERSION",
+    "ptTile->ptCompArray == NULL",
+    "ptTile->ptLRUCache == NULL"
+   ],
+   "size": 219,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF860",
+   "ordinal": null,
+   "name": "TILECMP_BuildProjectHash",
+   "demangled": null,
+   "prototype": "D2TileLibraryHashStrc *__fastcall(D2CmpNormalizedTileProject *pProject)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "hFindTile",
+    "hProject"
+   ],
+   "size": 131,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF8F0",
+   "ordinal": null,
+   "name": "TILECMP_RebaseComponentDataPointers",
+   "demangled": null,
+   "prototype": "void __stdcall(D2TileLibraryEntryStrc *pTile)",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptTile"
+   ],
+   "size": 85,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFF950",
+   "ordinal": 10074,
+   "name": "TILECMP_TileProjectIteratePixels",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpNormalizedTileProject *pProject, void (__stdcall *pfnVisit)(uint32_t dwRGB24))",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject",
+    "ptProject->dwFlags & TILEPROJECT_FLAG_24BIT"
+   ],
+   "size": 263,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFA60",
+   "ordinal": 10075,
+   "name": "TILECMP_TileProjectConvert24To8",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpNormalizedTileProject *pProject24, D2CmpNormalizedTileProject **ppProject8, uint8_t (__stdcall *pfnMapColor)(uint8_t nByte0, uint8_t nByte1, uint8_t nByte2))",
+   "source_file": "Tilecmp.cpp",
+   "asserts": [
+    "ptProject24",
+    "ptProject24->dwFlags & TILEPROJECT_FLAG_24BIT",
+    "ptProject8",
+    "ptProject8->ptTileArray",
+    "nSize",
+    "ptTile8->ptCompArray",
+    "ptData",
+    "nSize < 0x00010000",
+    "ptComp8->wFlags & TILECOMP_GAMESQUARE"
+   ],
+   "size": 873,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFDD0",
+   "ordinal": 10076,
+   "name": "TILECACHE_CallSetHardwareFreeCallback",
+   "demangled": null,
+   "prototype": "void __stdcall(D2CmpTileHardwareFreeCallback pfnCallback)",
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFDE0",
+   "ordinal": 10087,
+   "name": "TILELIB_TileLibraryAddProject",
+   "demangled": null,
+   "prototype": "void __stdcall(D2TileLibraryHashStrc **ptTileLibrary, const char *szName)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "ptTileLibrary",
+    "szName",
+    "ii < MAX_TILEPROJECT"
+   ],
+   "size": 133,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFE70",
+   "ordinal": 10088,
+   "name": "TILELIB_TileLibraryGetTiles",
+   "demangled": null,
+   "prototype": "uint32_t __stdcall(D2TileLibraryHashStrc **ptTileLibrary, int32_t nType, int32_t nStyle, int32_t nSequence, D2TileLibraryEntryStrc **pTileList, uint32_t nCapacity)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "ptTileLibrary"
+   ],
+   "size": 141,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFF00",
+   "ordinal": 10077,
+   "name": "TILELIB_TileGetType",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 36,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFF30",
+   "ordinal": 10078,
+   "name": "TILELIB_TileGetStyle",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 36,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFF60",
+   "ordinal": 10079,
+   "name": "TILELIB_TileGetFlags",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 39,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFF90",
+   "ordinal": 10080,
+   "name": "TILELIB_TileGetWidth",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 36,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFFC0",
+   "ordinal": 10081,
+   "name": "TILELIB_TileGetRarity",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 36,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FDFFFF0",
+   "ordinal": 10082,
+   "name": "TILELIB_TileGetSequence",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 36,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00020",
+   "ordinal": 10083,
+   "name": "TILELIB_TileGetTileLight",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 35,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00050",
+   "ordinal": 10084,
+   "name": "TILELIB_TileGetTotalHeight",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 39,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00080",
+   "ordinal": 10085,
+   "name": "TILELIB_TileGetCollisionInfo",
+   "demangled": null,
+   "prototype": "uint8_t *__stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 39,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE000B0",
+   "ordinal": 10086,
+   "name": "TILELIB_TileGetHeightToBottom",
+   "demangled": null,
+   "prototype": "int32_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 39,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE000E0",
+   "ordinal": 10100,
+   "name": "TILELIB_TileGetRoofHeight",
+   "demangled": null,
+   "prototype": "uint16_t __stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 40,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00110",
+   "ordinal": 10101,
+   "name": "TILELIB_TileGetFilename",
+   "demangled": null,
+   "prototype": "char *__stdcall(D2TileLibraryEntryStrc *hTile)",
+   "source_file": "TileLib.cpp",
+   "asserts": [
+    "hTile"
+   ],
+   "size": 39,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00140",
+   "ordinal": 10094,
+   "name": "TILEPROJECTS_DestroyTileHeaders",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": "TileProjects.cpp",
+   "asserts": null,
+   "size": 88,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE001A0",
+   "ordinal": 10095,
+   "name": "TILEPROJECTS_LoadProjectRecord",
+   "demangled": null,
+   "prototype": "D2CmpNormalizedTileProject *__stdcall(D2TileLibraryHashStrc **ppHash, const char *szFileName)",
+   "source_file": "TileProjects.cpp",
+   "asserts": [
+    "ptData",
+    "ptRecord"
+   ],
+   "size": 402,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00340",
+   "ordinal": null,
+   "name": "STORM_SMemFree",
+   "demangled": null,
+   "prototype": "int __stdcall(void *, const char *, int, unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 24,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00346",
+   "ordinal": null,
+   "name": "CELCMP_FindFirstSetBit1Based",
+   "demangled": null,
+   "prototype": "uint32_t __cdecl(uint32_t dwMask)",
+   "source_file": null,
+   "asserts": null,
+   "size": 27,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00362",
+   "ordinal": null,
+   "name": "STORM_SMemAlloc",
+   "demangled": null,
+   "prototype": "void *__stdcall(unsigned int, const char *, int, unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00368",
+   "ordinal": null,
+   "name": "PALETTE_VirtualAllocRWX",
+   "demangled": null,
+   "prototype": "void *__fastcall(uint32_t dwSize)",
+   "source_file": null,
+   "asserts": null,
+   "size": 17,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00379",
+   "ordinal": null,
+   "name": "PALETTE_VirtualRelease",
+   "demangled": null,
+   "prototype": "BOOL __fastcall(void *pAllocation)",
+   "source_file": null,
+   "asserts": null,
+   "size": 15,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00388",
+   "ordinal": null,
+   "name": "SHARED_CopyImageRows",
+   "demangled": null,
+   "prototype": "void __fastcall(uint8_t *pDst, const uint8_t *pSrc, int32_t nDstStride, int32_t nSrcStride, uint32_t nRows, uint32_t nRowBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 131,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0040C",
+   "ordinal": null,
+   "name": "STORM_SMemReAlloc",
+   "demangled": null,
+   "prototype": "void *__stdcall(void *, unsigned int, const char *, int, unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00412",
+   "ordinal": null,
+   "name": "STORM_SStrHash",
+   "demangled": null,
+   "prototype": "unsigned int __stdcall(const char *szString, unsigned int dwFlags, unsigned int dwSeed)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00418",
+   "ordinal": null,
+   "name": "ARCHIVE_OpenFile",
+   "demangled": null,
+   "prototype": "int32_t __fastcall(int32_t nUnused, const char *szFileName, void **ppFileHandle, int32_t bSuppressMissing)",
+   "source_file": null,
+   "asserts": [
+    "Error opening file: %s"
+   ],
+   "size": 60,
+   "callers": 10,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00454",
+   "ordinal": null,
+   "name": "ARCHIVE_CloseFile",
+   "demangled": null,
+   "prototype": "void __fastcall(int32_t nUnused, void *hFile)",
+   "source_file": "Archive.cpp",
+   "asserts": [
+    "hFile"
+   ],
+   "size": 38,
+   "callers": 10,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0047A",
+   "ordinal": null,
+   "name": "ARCHIVE_SeekFile",
+   "demangled": null,
+   "prototype": "void __fastcall(int32_t nUnused, void *hFile, int32_t lDistanceToMove, int32_t *lpDistanceToMoveHigh, uint32_t dwMoveMethod)",
+   "source_file": "Archive.cpp",
+   "asserts": [
+    "hFile"
+   ],
+   "size": 118,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE004F0",
+   "ordinal": null,
+   "name": "ARCHIVE_ReadFileExact",
+   "demangled": null,
+   "prototype": "void __fastcall(int32_t nUnused, void *hFile, void *pBuffer, uint32_t dwBytesToRead)",
+   "source_file": "Archive.cpp",
+   "asserts": [
+    "hFile",
+    "dwBytesToRead == dwBytes"
+   ],
+   "size": 167,
+   "callers": 10,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00598",
+   "ordinal": null,
+   "name": "STORM_SRegLoadValue",
+   "demangled": null,
+   "prototype": "int __stdcall(const char *szKeyName, const char *szValueName, unsigned int dwFlags, unsigned int *pdwValue)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0059E",
+   "ordinal": null,
+   "name": "STORM_SStrCmpI",
+   "demangled": null,
+   "prototype": "int __stdcall(const char *szLeft, const char *szRight, unsigned int dwMaxCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005A4",
+   "ordinal": null,
+   "name": "STORM_SFileGetFileName",
+   "demangled": null,
+   "prototype": "int __stdcall(void *hFile, char *szBuffer, int nBufferBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005AA",
+   "ordinal": null,
+   "name": "FOG_DisplayHalt",
+   "demangled": null,
+   "prototype": "void __cdecl(const char *szMsg, const char *szFile, int nLine)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005B0",
+   "ordinal": null,
+   "name": "FOG_DisplayAssert",
+   "demangled": null,
+   "prototype": "void __cdecl(const char *szMsg, const char *szFile, int nLine)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 194,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005B6",
+   "ordinal": null,
+   "name": "FOG_Alloc",
+   "demangled": null,
+   "prototype": "void *__fastcall(int nSize, const char *szFile, int nLine, int n0)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 36,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005BC",
+   "ordinal": null,
+   "name": "FOG_Free",
+   "demangled": null,
+   "prototype": "void __fastcall(void *pFree, const char *szFile, int nLine, int n0)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 28,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005C2",
+   "ordinal": null,
+   "name": "FOG_FreePool",
+   "demangled": null,
+   "prototype": "int __fastcall(void *pPool, void *pData, const char *szFile, int nLine, int nFlags)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005C8",
+   "ordinal": null,
+   "name": "FOG_AllocPool",
+   "demangled": null,
+   "prototype": "void *__fastcall(void *pPool, unsigned int dwSize, const char *szFile, int nLine, int nFlags)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005CE",
+   "ordinal": null,
+   "name": "FOG_Trace",
+   "demangled": null,
+   "prototype": "int(const char *, ...)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 23,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005D4",
+   "ordinal": null,
+   "name": "FOG_FGetFileSize",
+   "demangled": null,
+   "prototype": "unsigned int __fastcall(void *hFile, unsigned int *pFileSizeHigh)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005DA",
+   "ordinal": null,
+   "name": "FOG_FCloseFile",
+   "demangled": null,
+   "prototype": "int __fastcall(void *hFile)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005E0",
+   "ordinal": null,
+   "name": "FOG_FReadFile",
+   "demangled": null,
+   "prototype": "int __fastcall(void *hFile, void *pBuffer, unsigned int dwBytes, unsigned int *pBytesRead, unsigned int nUnknown0, unsigned int nUnknown1, unsigned int nUnknown2)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005E6",
+   "ordinal": null,
+   "name": "FOG_FOpenFile",
+   "demangled": null,
+   "prototype": "int __fastcall(const char *szFile, void **ppFileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005EC",
+   "ordinal": null,
+   "name": "FOG_AsyncDataFree",
+   "demangled": null,
+   "prototype": "void __fastcall(void *pAsyncData)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005F2",
+   "ordinal": null,
+   "name": "FOG_AsyncDataGetBuffer",
+   "demangled": null,
+   "prototype": "void *__fastcall(void *pAsyncData)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005F8",
+   "ordinal": null,
+   "name": "FOG_DisplayWarning",
+   "demangled": null,
+   "prototype": "void __cdecl(const char *szMsg, const char *szFile, int nLine)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 19,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE005FE",
+   "ordinal": null,
+   "name": "FOG_GetSystemInfo",
+   "demangled": null,
+   "prototype": "D2CmpFogSystemInfoPrefix *__cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00604",
+   "ordinal": null,
+   "name": "FOG_AsyncDataTestLoaded",
+   "demangled": null,
+   "prototype": "int __fastcall(void *pAsyncData)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0060A",
+   "ordinal": null,
+   "name": "FOG_csprintf",
+   "demangled": null,
+   "prototype": "const char *(char *szDest, const char *szFormat, ...)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00610",
+   "ordinal": null,
+   "name": "FOG_AsyncDataGetBufferSize",
+   "demangled": null,
+   "prototype": "unsigned int __fastcall(AsyncData *pAsyncData)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00616",
+   "ordinal": null,
+   "name": "FOG_AsyncDataLoadFileEx",
+   "demangled": null,
+   "prototype": "AsyncData *__fastcall(void *pMemPool, const char *szFileName, int bAllowAsync, int nFileOffset, int nFileSize, void *pBuffer, AsyncDataLoadFileCallback *pCallback, int nPriority, const char *szSourceFile, int nSourceLine)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0061C",
+   "ordinal": null,
+   "name": "FOG_TraceF",
+   "demangled": null,
+   "prototype": "void(const char *szFileSubName, const char *szFormat, ...)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00622",
+   "ordinal": null,
+   "name": "FOG_DisplayError",
+   "demangled": null,
+   "prototype": "void __cdecl(int nCategory, const char *szMsg, const char *szFile, int nLine)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00628",
+   "ordinal": null,
+   "name": "FOG_FSetFilePointer",
+   "demangled": null,
+   "prototype": "unsigned int __fastcall(void *hFile, int nDistance, int *pDistanceHigh, unsigned int nMoveMethod)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0062E",
+   "ordinal": null,
+   "name": "CRT__onexit",
+   "demangled": null,
+   "prototype": "_onexit_t __cdecl(_onexit_t Func)",
+   "source_file": null,
+   "asserts": null,
+   "size": 126,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE006AC",
+   "ordinal": null,
+   "name": "CRT_atexit",
+   "demangled": null,
+   "prototype": "int __cdecl(void (__cdecl *)())",
+   "source_file": null,
+   "asserts": null,
+   "size": 18,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE006BE",
+   "ordinal": null,
+   "name": "CRT___onexitinit",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 47,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE006ED",
+   "ordinal": null,
+   "name": "CRT_TypeInfo_Destroy",
+   "demangled": null,
+   "prototype": "void __thiscall(D2CmpMsvcTypeInfoPrefix *pInfo)",
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00716",
+   "ordinal": null,
+   "name": "CRT_TypeInfo_ScalarDeletingDestructor",
+   "demangled": null,
+   "prototype": "void *__thiscall(D2CmpMsvcTypeInfoPrefix *pInfo, unsigned int dwFlags)",
+   "source_file": null,
+   "asserts": null,
+   "size": 28,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00732",
+   "ordinal": null,
+   "name": "CRT_JumpToContinuation",
+   "demangled": null,
+   "prototype": "void __stdcall(void *, struct EHRegistrationNode *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00766",
+   "ordinal": null,
+   "name": "CRT_sub_6FE00766",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 7,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0076D",
+   "ordinal": null,
+   "name": "CRT_sub_6FE0076D",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 7,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00774",
+   "ordinal": null,
+   "name": "CRT_UnwindNestedFrames",
+   "demangled": null,
+   "prototype": "void __stdcall(PVOID TargetFrame, PEXCEPTION_RECORD ExceptionRecord)",
+   "source_file": null,
+   "asserts": null,
+   "size": 79,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE007C3",
+   "ordinal": null,
+   "name": "CRT___CxxFrameHandler",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 54,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE007F9",
+   "ordinal": null,
+   "name": "CRT_CallCatchBlock2",
+   "demangled": null,
+   "prototype": "void *__cdecl(struct EHRegistrationNode *, const struct _s_FuncInfo *, void *, int, unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 84,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0084D",
+   "ordinal": null,
+   "name": "CRT_CatchGuardHandler",
+   "demangled": null,
+   "prototype": "enum _EXCEPTION_DISPOSITION __cdecl(struct EHExceptionRecord *, struct CatchGuardRN *, void *, void *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 37,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00872",
+   "ordinal": null,
+   "name": "CRT_CallSETranslator",
+   "demangled": null,
+   "prototype": "int __cdecl(struct EHExceptionRecord *, struct EHRegistrationNode *, void *, void *, const struct _s_FuncInfo *, int, struct EHRegistrationNode *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 182,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00928",
+   "ordinal": null,
+   "name": "CRT_TranslatorGuardHandler",
+   "demangled": null,
+   "prototype": "enum _EXCEPTION_DISPOSITION __cdecl(PEXCEPTION_RECORD ExceptionRecord, PVOID TargetFrame, void *, void *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 117,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0099D",
+   "ordinal": null,
+   "name": "CRT_GetRangeOfTrysToCheck",
+   "demangled": null,
+   "prototype": "const struct _s_TryBlockMapEntry *__cdecl(const struct _s_FuncInfo *, int, int, unsigned int *, unsigned int *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 123,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00A18",
+   "ordinal": null,
+   "name": "CRT__global_unwind2",
+   "demangled": null,
+   "prototype": "void __cdecl(PVOID TargetFrame)",
+   "source_file": null,
+   "asserts": null,
+   "size": 32,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00A38",
+   "ordinal": null,
+   "name": "CRT__unwind_handler",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 34,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00A5A",
+   "ordinal": null,
+   "name": "CRT__local_unwind2",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 104,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00AC2",
+   "ordinal": null,
+   "name": "CRT__abnormal_termination",
+   "demangled": null,
+   "prototype": "int __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 35,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00AE5",
+   "ordinal": null,
+   "name": "CRT__NLG_Notify1",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00AEE",
+   "ordinal": null,
+   "name": "CRT__NLG_Notify",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 24,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00B06",
+   "ordinal": null,
+   "name": "CRT__cinit",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00B33",
+   "ordinal": null,
+   "name": "CRT_exit",
+   "demangled": null,
+   "prototype": "void __cdecl __noreturn(int Code)",
+   "source_file": null,
+   "asserts": null,
+   "size": 17,
+   "callers": 200,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00B44",
+   "ordinal": null,
+   "name": "CRT__exit",
+   "demangled": null,
+   "prototype": "void __cdecl __noreturn(int Code)",
+   "source_file": null,
+   "asserts": null,
+   "size": 17,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00B55",
+   "ordinal": null,
+   "name": "CRT__cexit",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 15,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00B64",
+   "ordinal": null,
+   "name": "CRT_doexit",
+   "demangled": null,
+   "prototype": "int __cdecl(UINT uExitCode, int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 163,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C09",
+   "ordinal": null,
+   "name": "CRT__lockexit",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C12",
+   "ordinal": null,
+   "name": "CRT__unlockexit",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C1B",
+   "ordinal": null,
+   "name": "CRT__initterm",
+   "demangled": null,
+   "prototype": "void __cdecl(_PVFV *First, _PVFV *Last)",
+   "source_file": null,
+   "asserts": null,
+   "size": 26,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C35",
+   "ordinal": null,
+   "name": "CRT_sprintf",
+   "demangled": null,
+   "prototype": "int(char *const Buffer, const char *const Format, ...)",
+   "source_file": null,
+   "asserts": null,
+   "size": 82,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C87",
+   "ordinal": null,
+   "name": "CRT__fpmath",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 23,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C9E",
+   "ordinal": null,
+   "name": "CRT_nullsub_1",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 1,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00C9F",
+   "ordinal": null,
+   "name": "CRT__cfltcvt_init",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 56,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00CE0",
+   "ordinal": null,
+   "name": "CRT__alloca_probe",
+   "demangled": null,
+   "prototype": "void __usercall(unsigned int@<eax>, char)",
+   "source_file": null,
+   "asserts": null,
+   "size": 47,
+   "callers": 6,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00D10",
+   "ordinal": null,
+   "name": "CRT__ftol",
+   "demangled": null,
+   "prototype": "__int64 __usercall@<edx:eax>(double@<st0>)",
+   "source_file": null,
+   "asserts": null,
+   "size": 39,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00D37",
+   "ordinal": null,
+   "name": "CRT_vsprintf",
+   "demangled": null,
+   "prototype": "int __cdecl(char *const Buffer, const char *const Format, va_list ArgList)",
+   "source_file": null,
+   "asserts": null,
+   "size": 81,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00D88",
+   "ordinal": null,
+   "name": "CRT__CRT_INIT_12",
+   "demangled": null,
+   "prototype": "int __stdcall(int, int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 217,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00E61",
+   "ordinal": null,
+   "name": "CRT_DllEntryPoint",
+   "demangled": null,
+   "prototype": "BOOL __stdcall(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved)",
+   "source_file": null,
+   "asserts": null,
+   "size": 157,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00EFE",
+   "ordinal": null,
+   "name": "CRT__amsg_exit",
+   "demangled": null,
+   "prototype": "void __cdecl __noreturn(DWORD NumberOfBytesWritten)",
+   "source_file": null,
+   "asserts": null,
+   "size": 48,
+   "callers": 9,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00F40",
+   "ordinal": null,
+   "name": "CRT_strrchr",
+   "demangled": null,
+   "prototype": "char *__cdecl(const char *Str, int Ch)",
+   "source_file": null,
+   "asserts": null,
+   "size": 39,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE00F67",
+   "ordinal": null,
+   "name": "CRT_sub_6FE00F67",
+   "demangled": null,
+   "prototype": "void *__cdecl(LPVOID lpMem, SIZE_T dwBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 815,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01296",
+   "ordinal": null,
+   "name": "CRT_sub_6FE01296",
+   "demangled": null,
+   "prototype": "int __cdecl(_DWORD *lpMem)",
+   "source_file": null,
+   "asserts": null,
+   "size": 238,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01384",
+   "ordinal": null,
+   "name": "CRT_malloc",
+   "demangled": null,
+   "prototype": "void *__cdecl(size_t Size)",
+   "source_file": null,
+   "asserts": null,
+   "size": 18,
+   "callers": 11,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01396",
+   "ordinal": null,
+   "name": "CRT__nh_malloc",
+   "demangled": null,
+   "prototype": "int __cdecl(size_t Size, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 44,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE013C2",
+   "ordinal": null,
+   "name": "CRT_sub_6FE013C2",
+   "demangled": null,
+   "prototype": "unsigned __int8 *__cdecl(unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 252,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE014BE",
+   "ordinal": null,
+   "name": "CRT__mtinitlocks",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE014E7",
+   "ordinal": null,
+   "name": "CRT__mtdeletelocks",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 108,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01553",
+   "ordinal": null,
+   "name": "CRT__lock",
+   "demangled": null,
+   "prototype": "void __cdecl(int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 97,
+   "callers": 25,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE015B4",
+   "ordinal": null,
+   "name": "CRT__unlock",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 21,
+   "callers": 27,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE015C9",
+   "ordinal": null,
+   "name": "CRT_Free",
+   "demangled": null,
+   "prototype": "void __cdecl(void *pAllocation)",
+   "source_file": null,
+   "asserts": null,
+   "size": 233,
+   "callers": 18,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE016C0",
+   "ordinal": null,
+   "name": "CRT_strcmp",
+   "demangled": null,
+   "prototype": "int __cdecl(const char *Str1, const char *Str2)",
+   "source_file": null,
+   "asserts": null,
+   "size": 132,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01744",
+   "ordinal": null,
+   "name": "CRT___InternalCxxFrameHandler",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 155,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE017DF",
+   "ordinal": null,
+   "name": "CRT_FindHandler",
+   "demangled": null,
+   "prototype": "void __cdecl(struct EHExceptionRecord *, struct EHRegistrationNode *, struct _CONTEXT *, void *, const struct _s_FuncInfo *, char, int, struct EHRegistrationNode *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 435,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01992",
+   "ordinal": null,
+   "name": "CRT_FindHandlerForForeignException",
+   "demangled": null,
+   "prototype": "void __cdecl(struct EHExceptionRecord *, struct EHRegistrationNode *, struct _CONTEXT *, void *, const struct _s_FuncInfo *, int, int, struct EHRegistrationNode *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 170,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01A3C",
+   "ordinal": null,
+   "name": "CRT_TypeMatch",
+   "demangled": null,
+   "prototype": "int __cdecl(const struct _s_HandlerType *, const struct _s_CatchableType *, const struct _s_ThrowInfo *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 93,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01A99",
+   "ordinal": null,
+   "name": "CRT___FrameUnwindToState",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 158,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01B37",
+   "ordinal": null,
+   "name": "CRT_unknown_libname_4",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 22,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01B4D",
+   "ordinal": null,
+   "name": "CRT_CatchIt",
+   "demangled": null,
+   "prototype": "void __cdecl(PEXCEPTION_RECORD ExceptionRecord, struct EHRegistrationNode *, struct _CONTEXT *, void *, const struct _s_FuncInfo *, const struct _s_HandlerType *, const struct _s_CatchableType *, const struct _s_TryBlockMapEntry *, int, PVOID TargetFrame, unsigned __int8)",
+   "source_file": null,
+   "asserts": null,
+   "size": 123,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01BC8",
+   "ordinal": null,
+   "name": "CRT_CallCatchBlock",
+   "demangled": null,
+   "prototype": "void *__cdecl(struct EHExceptionRecord *, struct EHRegistrationNode *, struct _CONTEXT *, const struct _s_FuncInfo *, void *, int, unsigned int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 283,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01CE3",
+   "ordinal": null,
+   "name": "CRT_ExFilterRethrow",
+   "demangled": null,
+   "prototype": "int __cdecl(struct _EXCEPTION_POINTERS *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 42,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01D0D",
+   "ordinal": null,
+   "name": "CRT_BuildCatchObject",
+   "demangled": null,
+   "prototype": "void __cdecl(struct EHExceptionRecord *, struct EHRegistrationNode *, const struct _s_HandlerType *, const struct _s_CatchableType *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 452,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01ED1",
+   "ordinal": null,
+   "name": "CRT_unknown_libname_5",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 103,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01F38",
+   "ordinal": null,
+   "name": "CRT_AdjustPointer",
+   "demangled": null,
+   "prototype": "void *__cdecl(void *, const struct PMD *)",
+   "source_file": null,
+   "asserts": null,
+   "size": 35,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01F60",
+   "ordinal": null,
+   "name": "CRT__CallSettingFrame_12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 76,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE01FAC",
+   "ordinal": null,
+   "name": "CRT__mtinit",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 84,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02000",
+   "ordinal": null,
+   "name": "CRT__mtterm",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 30,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0201E",
+   "ordinal": null,
+   "name": "CRT__initptd",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 19,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02031",
+   "ordinal": null,
+   "name": "CRT__getptd",
+   "demangled": null,
+   "prototype": "int __cdecl(_DWORD, _DWORD)",
+   "source_file": null,
+   "asserts": null,
+   "size": 103,
+   "callers": 16,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02098",
+   "ordinal": null,
+   "name": "CRT__freeptd",
+   "demangled": null,
+   "prototype": "DWORD __cdecl(void **lpMem)",
+   "source_file": null,
+   "asserts": null,
+   "size": 160,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02138",
+   "ordinal": null,
+   "name": "CRT_terminate",
+   "demangled": null,
+   "prototype": "void __cdecl __noreturn()",
+   "source_file": null,
+   "asserts": null,
+   "size": 97,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02199",
+   "ordinal": null,
+   "name": "CRT_sub_6FE02199",
+   "demangled": null,
+   "prototype": "void __thiscall __noreturn(EXCEPTION_POINTERS *this)",
+   "source_file": null,
+   "asserts": null,
+   "size": 86,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE021EF",
+   "ordinal": null,
+   "name": "CRT__flsbuf",
+   "demangled": null,
+   "prototype": "int __cdecl(int Ch, FILE *File)",
+   "source_file": null,
+   "asserts": null,
+   "size": 280,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02307",
+   "ordinal": null,
+   "name": "CRT__output",
+   "demangled": null,
+   "prototype": "int __cdecl(FILE *File, int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 1825,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02A48",
+   "ordinal": null,
+   "name": "CRT_write_char",
+   "demangled": null,
+   "prototype": "int __cdecl(int, FILE *File, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 53,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02A7D",
+   "ordinal": null,
+   "name": "CRT_write_multi_char",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int, FILE *File, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 49,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02AAE",
+   "ordinal": null,
+   "name": "CRT_write_string",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int, FILE *File, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 56,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02AE6",
+   "ordinal": null,
+   "name": "CRT_get_int_arg",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 13,
+   "callers": 10,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02AF3",
+   "ordinal": null,
+   "name": "CRT_get_int64_arg",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 16,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02B03",
+   "ordinal": null,
+   "name": "CRT_get_short_arg",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 14,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02B11",
+   "ordinal": null,
+   "name": "CRT__setdefaultprecision",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 18,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02B23",
+   "ordinal": null,
+   "name": "CRT__ms_p5_test_fdiv",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 62,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02B61",
+   "ordinal": null,
+   "name": "CRT__ms_p5_mp_test_fdiv",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": [
+    "KERNEL32",
+    "IsProcessorFeaturePresent"
+   ],
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02B8A",
+   "ordinal": null,
+   "name": "CRT__forcdecpt",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 90,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02BE4",
+   "ordinal": null,
+   "name": "CRT__cropzeros",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 78,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02C32",
+   "ordinal": null,
+   "name": "CRT__positive",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 24,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02C4A",
+   "ordinal": null,
+   "name": "CRT__fassign",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 62,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02C88",
+   "ordinal": null,
+   "name": "CRT__cftoe",
+   "demangled": null,
+   "prototype": "int __usercall@<eax>(int@<ecx>, int, int, int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 97,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02CE9",
+   "ordinal": null,
+   "name": "CRT__cftoe2",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": [
+    "e+000"
+   ],
+   "size": 194,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02DAB",
+   "ordinal": null,
+   "name": "CRT__cftof",
+   "demangled": null,
+   "prototype": "int __usercall@<eax>(int@<ecx>, int, void *Src, size_t Size)",
+   "source_file": null,
+   "asserts": null,
+   "size": 85,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02E00",
+   "ordinal": null,
+   "name": "CRT__cftof2",
+   "demangled": null,
+   "prototype": "char *__cdecl(char *Src, int Size, _DWORD *, char)",
+   "source_file": null,
+   "asserts": null,
+   "size": 167,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02EA7",
+   "ordinal": null,
+   "name": "CRT__cftog",
+   "demangled": null,
+   "prototype": "int __usercall@<eax>(int@<ecx>, int, void *Src, size_t Size, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 147,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02F3A",
+   "ordinal": null,
+   "name": "CRT__cfltcvt",
+   "demangled": null,
+   "prototype": "int __cdecl(int, void *Src, int, size_t Size, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 81,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02F8B",
+   "ordinal": null,
+   "name": "CRT__shift",
+   "demangled": null,
+   "prototype": "int __cdecl(void *Src, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 37,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE02FB0",
+   "ordinal": null,
+   "name": "CRT__ioinit",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 444,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0316C",
+   "ordinal": null,
+   "name": "CRT__ioterm",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 84,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE031C0",
+   "ordinal": null,
+   "name": "CRT__setenvp",
+   "demangled": null,
+   "prototype": "void()",
+   "source_file": null,
+   "asserts": null,
+   "size": 185,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03279",
+   "ordinal": null,
+   "name": "CRT__setargv",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 153,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03312",
+   "ordinal": null,
+   "name": "CRT_parse_cmdline",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 436,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE034C6",
+   "ordinal": null,
+   "name": "CRT___crtGetEnvironmentStringsA",
+   "demangled": null,
+   "prototype": "CHAR *()",
+   "source_file": null,
+   "asserts": null,
+   "size": 306,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE035F8",
+   "ordinal": null,
+   "name": "CRT_ReadMainImageLinkerVersion",
+   "demangled": null,
+   "prototype": "void __cdecl(D2CmpPeLinkerVersion *pVersion)",
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03625",
+   "ordinal": null,
+   "name": "CRT_SelectHeapPolicy",
+   "demangled": null,
+   "prototype": "int __cdecl()",
+   "source_file": null,
+   "asserts": [
+    "__MSVCRT_HEAP_SELECT",
+    "__GLOBAL_HEAP_SELECTED"
+   ],
+   "size": 328,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0376D",
+   "ordinal": null,
+   "name": "CRT_Heap_Initialize",
+   "demangled": null,
+   "prototype": "int __cdecl(int bSerialize)",
+   "source_file": null,
+   "asserts": null,
+   "size": 93,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE037CA",
+   "ordinal": null,
+   "name": "CRT_Heap_Destroy",
+   "demangled": null,
+   "prototype": "BOOL __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 168,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03872",
+   "ordinal": null,
+   "name": "CRT__FF_MSGBANNER",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 57,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE038AB",
+   "ordinal": null,
+   "name": "CRT__NMSG_WRITE",
+   "demangled": null,
+   "prototype": "int __cdecl(DWORD NumberOfBytesWritten)",
+   "source_file": null,
+   "asserts": [
+    "<program name unknown>",
+    "Runtime Error!\n\nProgram:",
+    "Microsoft Visual C++ Runtime Library"
+   ],
+   "size": 339,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE039FE",
+   "ordinal": null,
+   "name": "CRT_SmallHeap_Initialize",
+   "demangled": null,
+   "prototype": "int __cdecl(unsigned int dwThresholdBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 72,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03A46",
+   "ordinal": null,
+   "name": "CRT___sbh_find_block",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 43,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03A71",
+   "ordinal": null,
+   "name": "CRT_sub_6FE03A71",
+   "demangled": null,
+   "prototype": "_DWORD *__cdecl(_DWORD *, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 809,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE03D9A",
+   "ordinal": null,
+   "name": "CRT___sbh_alloc_block",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 777,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE040A3",
+   "ordinal": null,
+   "name": "CRT___sbh_alloc_new_region",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 177,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04154",
+   "ordinal": null,
+   "name": "CRT___sbh_alloc_new_group",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 251,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0424F",
+   "ordinal": null,
+   "name": "CRT___sbh_resize_block",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 758,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04545",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_CreateRegion",
+   "demangled": null,
+   "prototype": "D2CmpCrtLegacyRegion *__cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 324,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04689",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_ReleaseRegion",
+   "demangled": null,
+   "prototype": "void __cdecl(D2CmpCrtLegacyRegion *pRegion)",
+   "source_file": null,
+   "asserts": null,
+   "size": 86,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE046DF",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_TrimPages",
+   "demangled": null,
+   "prototype": "void __cdecl(int nPageQuota)",
+   "source_file": null,
+   "asserts": null,
+   "size": 194,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE047A1",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_FindBlockDescriptor",
+   "demangled": null,
+   "prototype": "unsigned __int8 *__cdecl(void *pAllocation, D2CmpCrtLegacyRegion **ppRegion, D2CmpCrtLegacyPagePrefix **ppPage)",
+   "source_file": null,
+   "asserts": null,
+   "size": 87,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE047F8",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_FreeBlock",
+   "demangled": null,
+   "prototype": "void __cdecl(D2CmpCrtLegacyRegion *pRegion, D2CmpCrtLegacyPagePrefix *pPage, unsigned __int8 *pUnitCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 69,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0483D",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_AllocateBlock",
+   "demangled": null,
+   "prototype": "unsigned __int8 *__cdecl(unsigned int dwRequestedUnits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 520,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04A45",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_AllocateFromPage",
+   "demangled": null,
+   "prototype": "unsigned __int8 *__cdecl(D2CmpCrtLegacyPagePrefix *pPage, unsigned int dwFreeBudget, unsigned int dwRequestedUnits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 292,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04B69",
+   "ordinal": null,
+   "name": "CRT_LegacyHeap_ResizeBlock",
+   "demangled": null,
+   "prototype": "int __cdecl(D2CmpCrtLegacyRegion *pRegion, D2CmpCrtLegacyPagePrefix *pPage, unsigned __int8 *pUnitCount, unsigned int dwNewUnits)",
+   "source_file": null,
+   "asserts": null,
+   "size": 169,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04C12",
+   "ordinal": null,
+   "name": "CRT__callnewh",
+   "demangled": null,
+   "prototype": "int __cdecl(size_t Size)",
+   "source_file": null,
+   "asserts": null,
+   "size": 27,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04C30",
+   "ordinal": null,
+   "name": "CRT_memcpy",
+   "demangled": null,
+   "prototype": "void *__cdecl(void *, const void *Src, size_t Size)",
+   "source_file": null,
+   "asserts": null,
+   "size": 821,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE04F70",
+   "ordinal": null,
+   "name": "CRT__except_handler3",
+   "demangled": null,
+   "prototype": "int __cdecl(int, PVOID TargetFrame, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 189,
+   "callers": 14,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0502D",
+   "ordinal": null,
+   "name": "CRT__seh_longjmp_unwind_4",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 27,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05048",
+   "ordinal": null,
+   "name": "CRT_CxxUnhandledExceptionFilter",
+   "demangled": null,
+   "prototype": "LONG __stdcall(struct _EXCEPTION_POINTERS *ExceptionInfo)",
+   "source_file": null,
+   "asserts": null,
+   "size": 70,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0508E",
+   "ordinal": null,
+   "name": "CRT_InstallCxxUnhandledExceptionFilter",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 17,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0509F",
+   "ordinal": null,
+   "name": "CRT_RestoreUnhandledExceptionFilter",
+   "demangled": null,
+   "prototype": "void __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 13,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE050AC",
+   "ordinal": null,
+   "name": "CRT_ValidateRead",
+   "demangled": null,
+   "prototype": "int __cdecl(const void *lp, UINT_PTR ucb)",
+   "source_file": null,
+   "asserts": null,
+   "size": 28,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE050C8",
+   "ordinal": null,
+   "name": "CRT_ValidateWrite",
+   "demangled": null,
+   "prototype": "int __cdecl(void *lp, UINT_PTR ucb)",
+   "source_file": null,
+   "asserts": null,
+   "size": 28,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE050E4",
+   "ordinal": null,
+   "name": "CRT_ValidateExecute",
+   "demangled": null,
+   "prototype": "int __cdecl(FARPROC lpfn)",
+   "source_file": null,
+   "asserts": null,
+   "size": 24,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05100",
+   "ordinal": null,
+   "name": "CRT_memcpy_0",
+   "demangled": null,
+   "prototype": "void *__cdecl(void *, const void *Src, size_t Size)",
+   "source_file": null,
+   "asserts": null,
+   "size": 821,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05435",
+   "ordinal": null,
+   "name": "CRT_sub_6FE05435",
+   "demangled": null,
+   "prototype": "void *__cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 317,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05589",
+   "ordinal": null,
+   "name": "CRT__lseek",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle, int Offset, int Origin)",
+   "source_file": null,
+   "asserts": null,
+   "size": 101,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE055EE",
+   "ordinal": null,
+   "name": "CRT__lseek_lk",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle, LONG lDistanceToMove, DWORD dwMoveMethod)",
+   "source_file": null,
+   "asserts": null,
+   "size": 115,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05661",
+   "ordinal": null,
+   "name": "CRT__write",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle, const void *Buf, unsigned int MaxCharCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 101,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE056C6",
+   "ordinal": null,
+   "name": "CRT__write_lk",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite)",
+   "source_file": null,
+   "asserts": null,
+   "size": 395,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05851",
+   "ordinal": null,
+   "name": "CRT__getbuf",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 68,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05895",
+   "ordinal": null,
+   "name": "CRT__isatty",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE058BE",
+   "ordinal": null,
+   "name": "CRT___initstdio",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 168,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05966",
+   "ordinal": null,
+   "name": "CRT___endstdio",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 20,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0597A",
+   "ordinal": null,
+   "name": "CRT__lock_file",
+   "demangled": null,
+   "prototype": "void __cdecl(FILE *Stream)",
+   "source_file": null,
+   "asserts": null,
+   "size": 47,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE059A9",
+   "ordinal": null,
+   "name": "CRT__lock_file2",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 35,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE059CC",
+   "ordinal": null,
+   "name": "CRT__unlock_file",
+   "demangled": null,
+   "prototype": "void __cdecl(FILE *Stream)",
+   "source_file": null,
+   "asserts": null,
+   "size": 47,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE059FB",
+   "ordinal": null,
+   "name": "CRT__unlock_file2",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 35,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05A20",
+   "ordinal": null,
+   "name": "CRT_strlen",
+   "demangled": null,
+   "prototype": "size_t __cdecl(const char *Str)",
+   "source_file": null,
+   "asserts": null,
+   "size": 123,
+   "callers": 8,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05A9B",
+   "ordinal": null,
+   "name": "CRT_wctomb",
+   "demangled": null,
+   "prototype": "int __cdecl(char *MbCh, wchar_t WCh)",
+   "source_file": null,
+   "asserts": null,
+   "size": 89,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05AF4",
+   "ordinal": null,
+   "name": "CRT__wctomb_lk",
+   "demangled": null,
+   "prototype": "int __cdecl(LPSTR lpMultiByteStr, WCHAR WideCharStr)",
+   "source_file": null,
+   "asserts": null,
+   "size": 105,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05B60",
+   "ordinal": null,
+   "name": "CRT__aulldiv",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 104,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05BD0",
+   "ordinal": null,
+   "name": "CRT__aullrem",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 117,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05C45",
+   "ordinal": null,
+   "name": "CRT__control87",
+   "demangled": null,
+   "prototype": "unsigned int __cdecl(unsigned int NewValue, unsigned int Mask)",
+   "source_file": null,
+   "asserts": null,
+   "size": 53,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05C7A",
+   "ordinal": null,
+   "name": "CRT__controlfp",
+   "demangled": null,
+   "prototype": "unsigned int __cdecl(unsigned int NewValue, unsigned int Mask)",
+   "source_file": null,
+   "asserts": null,
+   "size": 22,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05C90",
+   "ordinal": null,
+   "name": "CRT__abstract_cw",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 146,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05D22",
+   "ordinal": null,
+   "name": "CRT__hw_cw",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 137,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05DAB",
+   "ordinal": null,
+   "name": "CRT__isctype",
+   "demangled": null,
+   "prototype": "int __cdecl(int C, int Type)",
+   "source_file": null,
+   "asserts": null,
+   "size": 117,
+   "callers": 11,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05E20",
+   "ordinal": null,
+   "name": "CRT_tolower",
+   "demangled": null,
+   "prototype": "int __cdecl(int C)",
+   "source_file": null,
+   "asserts": null,
+   "size": 111,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05E8F",
+   "ordinal": null,
+   "name": "CRT_tolower_0",
+   "demangled": null,
+   "prototype": "int __cdecl(int C)",
+   "source_file": null,
+   "asserts": null,
+   "size": 203,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05F5A",
+   "ordinal": null,
+   "name": "CRT__ZeroTail",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 73,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05FA3",
+   "ordinal": null,
+   "name": "CRT__IncMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 86,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE05FF9",
+   "ordinal": null,
+   "name": "CRT__RoundMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 140,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06085",
+   "ordinal": null,
+   "name": "CRT__CopyMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 27,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE060A0",
+   "ordinal": null,
+   "name": "CRT__FillZeroMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 12,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE060AC",
+   "ordinal": null,
+   "name": "CRT__IsZeroMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 27,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE060C7",
+   "ordinal": null,
+   "name": "CRT__ShrMan",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 141,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06154",
+   "ordinal": null,
+   "name": "CRT__ld12cvt",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 364,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE062C0",
+   "ordinal": null,
+   "name": "CRT_sub_6FE062C0",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 22,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE062D6",
+   "ordinal": null,
+   "name": "CRT_sub_6FE062D6",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 22,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE062EC",
+   "ordinal": null,
+   "name": "CRT_sub_6FE062EC",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06319",
+   "ordinal": null,
+   "name": "CRT_sub_6FE06319",
+   "demangled": null,
+   "prototype": "int __cdecl(int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06346",
+   "ordinal": null,
+   "name": "CRT__fptostr",
+   "demangled": null,
+   "prototype": "int __cdecl(void *, int, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 119,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE063BD",
+   "ordinal": null,
+   "name": "CRT__fltout2",
+   "demangled": null,
+   "prototype": "int __cdecl(char, int, int, char *Destination)",
+   "source_file": null,
+   "asserts": null,
+   "size": 92,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06419",
+   "ordinal": null,
+   "name": "CRT___dtold",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 182,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE064D0",
+   "ordinal": null,
+   "name": "CRT_strcpy",
+   "demangled": null,
+   "prototype": "char *__cdecl(char *Destination, const char *Source)",
+   "source_file": null,
+   "asserts": null,
+   "size": 7,
+   "callers": 7,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE064E0",
+   "ordinal": null,
+   "name": "CRT_strcat",
+   "demangled": null,
+   "prototype": "char *__cdecl(char *Destination, const char *Source)",
+   "source_file": null,
+   "asserts": null,
+   "size": 224,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE065C0",
+   "ordinal": null,
+   "name": "CRT_memset",
+   "demangled": null,
+   "prototype": "void *__cdecl(void *pDestination, int nValue, size_t nBytes)",
+   "source_file": null,
+   "asserts": null,
+   "size": 88,
+   "callers": 5,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06618",
+   "ordinal": null,
+   "name": "CRT__fptrap",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 7,
+   "callers": 9,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06621",
+   "ordinal": null,
+   "name": "CRT__setmbcp",
+   "demangled": null,
+   "prototype": "int __cdecl(int CodePage)",
+   "source_file": null,
+   "asserts": null,
+   "size": 429,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE067CE",
+   "ordinal": null,
+   "name": "CRT_getSystemCP",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 74,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06818",
+   "ordinal": null,
+   "name": "CRT_CPtoLCID",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 51,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0684B",
+   "ordinal": null,
+   "name": "CRT_setSBCS",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 41,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06874",
+   "ordinal": null,
+   "name": "CRT_setSBUpLow",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 389,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE069F9",
+   "ordinal": null,
+   "name": "CRT___initmbctable",
+   "demangled": null,
+   "prototype": "int(void)",
+   "source_file": null,
+   "asserts": null,
+   "size": 28,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06A15",
+   "ordinal": null,
+   "name": "CRT_strtol",
+   "demangled": null,
+   "prototype": "int __cdecl(const char *String, char **EndPtr, int Radix)",
+   "source_file": null,
+   "asserts": null,
+   "size": 23,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06A2C",
+   "ordinal": null,
+   "name": "CRT_strtoxl",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 517,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06C50",
+   "ordinal": null,
+   "name": "CRT_strchr",
+   "demangled": null,
+   "prototype": "char *__cdecl(const char *Str, int Val)",
+   "source_file": null,
+   "asserts": null,
+   "size": 188,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06D10",
+   "ordinal": null,
+   "name": "CRT_strstr",
+   "demangled": null,
+   "prototype": "char *__cdecl(const char *Str, const char *SubStr)",
+   "source_file": null,
+   "asserts": null,
+   "size": 128,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06D90",
+   "ordinal": null,
+   "name": "CRT_strncmp",
+   "demangled": null,
+   "prototype": "int __cdecl(const char *Str1, const char *Str2, size_t MaxCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 56,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06DC8",
+   "ordinal": null,
+   "name": "CRT___crtMessageBoxA",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": [
+    "user32.dll",
+    "MessageBoxA",
+    "GetActiveWindow",
+    "GetLastActivePopup"
+   ],
+   "size": 137,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06E60",
+   "ordinal": null,
+   "name": "CRT_strncpy",
+   "demangled": null,
+   "prototype": "char *__cdecl(char *Destination, const char *Source, size_t Count)",
+   "source_file": null,
+   "asserts": null,
+   "size": 254,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE06F5E",
+   "ordinal": null,
+   "name": "CRT_raise",
+   "demangled": null,
+   "prototype": "int __cdecl(int Signal)",
+   "source_file": null,
+   "asserts": null,
+   "size": 386,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE070E0",
+   "ordinal": null,
+   "name": "CRT_siglookup",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 61,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0711D",
+   "ordinal": null,
+   "name": "CRT__dosmaperr",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 115,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07190",
+   "ordinal": null,
+   "name": "CRT__errno",
+   "demangled": null,
+   "prototype": "int *__cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 16,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07199",
+   "ordinal": null,
+   "name": "CRT___doserrno",
+   "demangled": null,
+   "prototype": "unsigned int *__cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 9,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE071A2",
+   "ordinal": null,
+   "name": "CRT__free_osfhnd",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 127,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07221",
+   "ordinal": null,
+   "name": "CRT__get_osfhandle",
+   "demangled": null,
+   "prototype": "intptr_t __cdecl(int FileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 66,
+   "callers": 6,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07263",
+   "ordinal": null,
+   "name": "CRT__lock_fhandle",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 95,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE072C2",
+   "ordinal": null,
+   "name": "CRT__unlock_fhandle",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 34,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE072E4",
+   "ordinal": null,
+   "name": "CRT__fcloseall",
+   "demangled": null,
+   "prototype": "int __cdecl()",
+   "source_file": null,
+   "asserts": null,
+   "size": 129,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07365",
+   "ordinal": null,
+   "name": "CRT__fflush_lk",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 46,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07393",
+   "ordinal": null,
+   "name": "CRT__flush",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 92,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE073EF",
+   "ordinal": null,
+   "name": "CRT_sub_6FE073EF",
+   "demangled": null,
+   "prototype": "int()",
+   "source_file": null,
+   "asserts": null,
+   "size": 9,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE073F8",
+   "ordinal": null,
+   "name": "CRT_flsall",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 164,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0749C",
+   "ordinal": null,
+   "name": "CRT___crtGetStringTypeA",
+   "demangled": null,
+   "prototype": "BOOL __cdecl(DWORD dwInfoType, LPCSTR lpSrcStr, int cchSrc, LPWORD lpCharType, UINT CodePage, LCID Locale, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 329,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE075E5",
+   "ordinal": null,
+   "name": "CRT___crtLCMapStringA",
+   "demangled": null,
+   "prototype": "int __cdecl(LCID Locale, DWORD dwMapFlags, LPCSTR lpSrcStr, int cchSrc, LPSTR lpDestStr, int cchDest, UINT CodePage, int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 548,
+   "callers": 4,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07809",
+   "ordinal": null,
+   "name": "CRT_strncnt",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 43,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07834",
+   "ordinal": null,
+   "name": "CRT___addl",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 33,
+   "callers": 7,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07855",
+   "ordinal": null,
+   "name": "CRT___add_12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 94,
+   "callers": 3,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE078B3",
+   "ordinal": null,
+   "name": "CRT___shl_12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 46,
+   "callers": 9,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE078E1",
+   "ordinal": null,
+   "name": "CRT___shr_12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 45,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0790E",
+   "ordinal": null,
+   "name": "CRT___mtold12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 199,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE079D5",
+   "ordinal": null,
+   "name": "CRT___strgtold12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 1185,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE07EA6",
+   "ordinal": null,
+   "name": "CRT__I10_OUTPUT",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": [
+    "1#SNAN",
+    "1#IND",
+    "1#INF",
+    "1#QNAN"
+   ],
+   "size": 659,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08139",
+   "ordinal": null,
+   "name": "CRT_toupper",
+   "demangled": null,
+   "prototype": "int __cdecl(int C)",
+   "source_file": null,
+   "asserts": null,
+   "size": 111,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE081A8",
+   "ordinal": null,
+   "name": "CRT_toupper_0",
+   "demangled": null,
+   "prototype": "int __cdecl(int C)",
+   "source_file": null,
+   "asserts": null,
+   "size": 204,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08274",
+   "ordinal": null,
+   "name": "CRT_fclose",
+   "demangled": null,
+   "prototype": "int __cdecl(FILE *Stream)",
+   "source_file": null,
+   "asserts": null,
+   "size": 49,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE082A5",
+   "ordinal": null,
+   "name": "CRT__fclose_lk",
+   "demangled": null,
+   "prototype": "int __cdecl(int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 76,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE082F1",
+   "ordinal": null,
+   "name": "CRT__commit",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 147,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08390",
+   "ordinal": null,
+   "name": "CRT_strcspn",
+   "demangled": null,
+   "prototype": "size_t __cdecl(const char *Str, const char *Control)",
+   "source_file": null,
+   "asserts": null,
+   "size": 62,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE083D0",
+   "ordinal": null,
+   "name": "CRT_strpbrk",
+   "demangled": null,
+   "prototype": "char *__cdecl(const char *Str, const char *Control)",
+   "source_file": null,
+   "asserts": null,
+   "size": 58,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0840A",
+   "ordinal": null,
+   "name": "CRT___ld12mul",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 544,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE0862A",
+   "ordinal": null,
+   "name": "CRT___multtenpow12",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 124,
+   "callers": 2,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE086A6",
+   "ordinal": null,
+   "name": "CRT__close",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 93,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08703",
+   "ordinal": null,
+   "name": "CRT__close_lk",
+   "demangled": null,
+   "prototype": "int __cdecl(int FileHandle)",
+   "source_file": null,
+   "asserts": null,
+   "size": 131,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08786",
+   "ordinal": null,
+   "name": "CRT__freebuf",
+   "demangled": null,
+   "prototype": "int __cdecl(int)",
+   "source_file": null,
+   "asserts": null,
+   "size": 43,
+   "callers": 1,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE087C0",
+   "ordinal": null,
+   "name": "CRT__strcmpi",
+   "demangled": null,
+   "prototype": "int __cdecl(const char *String1, const char *String2)",
+   "source_file": null,
+   "asserts": null,
+   "size": 208,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE08890",
+   "ordinal": null,
+   "name": "CRT__strnicmp",
+   "demangled": null,
+   "prototype": "int __cdecl(const char *String1, const char *String2, size_t MaxCount)",
+   "source_file": null,
+   "asserts": null,
+   "size": 257,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE089A0",
+   "ordinal": null,
+   "name": "CRT__allmul",
+   "demangled": null,
+   "prototype": null,
+   "source_file": null,
+   "asserts": null,
+   "size": 52,
+   "callers": 0,
+   "placeholder": false
+  },
+  {
+   "ea": "0x6FE089D4",
+   "ordinal": null,
+   "name": "KERNEL32_RtlUnwind",
+   "demangled": null,
+   "prototype": "void __stdcall(PVOID TargetFrame, PVOID TargetIp, PEXCEPTION_RECORD ExceptionRecord, PVOID ReturnValue)",
+   "source_file": null,
+   "asserts": null,
+   "size": 6,
+   "callers": 2,
+   "placeholder": false
+  }
+ ],
+ "globals": [
+  {
+   "ea": "0x6FDF6370",
+   "name": "gaFastCmpDC6MapBlendRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF666C",
+   "name": "gaFastCmpDC6MapBlendClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF6810",
+   "name": "gaFastCmpDC6PreMapMapRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF6A38",
+   "name": "gaFastCmpDC6PreMapMapClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF6B78",
+   "name": "gaFastCmpDC6MapRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF6D44",
+   "name": "gaFastCmpDC6MapClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF6FB0",
+   "name": "gaFastCmpDC6PreMapBlendRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF72AC",
+   "name": "gaFastCmpDC6PreMapBlendClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF73E8",
+   "name": "gaFastCmpDC6PreMapRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF75B4",
+   "name": "gaFastCmpDC6PreMapClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF77C0",
+   "name": "gaFastCmpDC6BlendRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FDF7A58",
+   "name": "gaFastCmpDC6BlendClippedRemainderTargets",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09054",
+   "name": "gdwBitMasks",
+   "type": "const unsigned int *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09060",
+   "name": "ExitProcess",
+   "type": "void (__stdcall __noreturn *)(UINT uExitCode)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09064",
+   "name": "TlsAlloc",
+   "type": "DWORD (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09068",
+   "name": "TlsFree",
+   "type": "BOOL (__stdcall *)(DWORD dwTlsIndex)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0906C",
+   "name": "TlsSetValue",
+   "type": "BOOL (__stdcall *)(DWORD dwTlsIndex, LPVOID lpTlsValue)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09070",
+   "name": "DeleteCriticalSection",
+   "type": "void (__stdcall *)(LPCRITICAL_SECTION lpCriticalSection)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09074",
+   "name": "LeaveCriticalSection",
+   "type": "void (__stdcall *)(LPCRITICAL_SECTION lpCriticalSection)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09078",
+   "name": "EnterCriticalSection",
+   "type": "void (__stdcall *)(LPCRITICAL_SECTION lpCriticalSection)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0907C",
+   "name": "InitializeCriticalSection",
+   "type": "void (__stdcall *)(LPCRITICAL_SECTION lpCriticalSection)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09080",
+   "name": "SetFilePointer",
+   "type": "DWORD (__stdcall *)(HANDLE hFile, LONG lDistanceToMove, PLONG lpDistanceToMoveHigh, DWORD dwMoveMethod)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09084",
+   "name": "CloseHandle",
+   "type": "BOOL (__stdcall *)(HANDLE hObject)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09088",
+   "name": "ReadFile",
+   "type": "BOOL (__stdcall *)(HANDLE hFile, LPVOID lpBuffer, DWORD nNumberOfBytesToRead, LPDWORD lpNumberOfBytesRead, LPOVERLAPPED lpOverlapped)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0908C",
+   "name": "GetFileSize",
+   "type": "DWORD (__stdcall *)(HANDLE hFile, LPDWORD lpFileSizeHigh)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09090",
+   "name": "OutputDebugStringA",
+   "type": "void (__stdcall *)(LPCSTR lpOutputString)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09094",
+   "name": "CreateFileA",
+   "type": "HANDLE (__stdcall *)(LPCSTR lpFileName, DWORD dwDesiredAccess, DWORD dwShareMode, LPSECURITY_ATTRIBUTES lpSecurityAttributes, DWORD dwCreationDisposition, DWORD dwFlagsAndAttributes, HANDLE hTemplateFile)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09098",
+   "name": "lstrlenA",
+   "type": "int (__stdcall *)(LPCSTR lpString)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0909C",
+   "name": "GetTickCount",
+   "type": "DWORD (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090A0",
+   "name": "IsBadCodePtr",
+   "type": "BOOL (__stdcall *)(FARPROC lpfn)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090A4",
+   "name": "VirtualAlloc",
+   "type": "LPVOID (__stdcall *)(LPVOID lpAddress, SIZE_T dwSize, DWORD flAllocationType, DWORD flProtect)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090A8",
+   "name": "VirtualFree",
+   "type": "BOOL (__stdcall *)(LPVOID lpAddress, SIZE_T dwSize, DWORD dwFreeType)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090AC",
+   "name": "GetLastError",
+   "type": "DWORD (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090B0",
+   "name": "GetModuleFileNameA",
+   "type": "DWORD (__stdcall *)(HMODULE hModule, LPSTR lpFilename, DWORD nSize)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090B8",
+   "name": "WideCharToMultiByte",
+   "type": "int (__stdcall *)(UINT CodePage, DWORD dwFlags, LPCWCH lpWideCharStr, int cchWideChar, LPSTR lpMultiByteStr, int cbMultiByte, LPCCH lpDefaultChar, LPBOOL lpUsedDefaultChar)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090BC",
+   "name": "TerminateProcess",
+   "type": "BOOL (__stdcall *)(HANDLE hProcess, UINT uExitCode)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090C0",
+   "name": "GetCurrentProcess",
+   "type": "HANDLE (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090C4",
+   "name": "GetCommandLineA",
+   "type": "LPSTR (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090C8",
+   "name": "GetVersion",
+   "type": "DWORD (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090CC",
+   "name": "HeapReAlloc",
+   "type": "LPVOID (__stdcall *)(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem, SIZE_T dwBytes)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090D0",
+   "name": "HeapAlloc",
+   "type": "LPVOID (__stdcall *)(HANDLE hHeap, DWORD dwFlags, SIZE_T dwBytes)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090D4",
+   "name": "HeapSize",
+   "type": "SIZE_T (__stdcall *)(HANDLE hHeap, DWORD dwFlags, LPCVOID lpMem)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090D8",
+   "name": "HeapFree",
+   "type": "BOOL (__stdcall *)(HANDLE hHeap, DWORD dwFlags, LPVOID lpMem)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090DC",
+   "name": "GetCurrentThreadId",
+   "type": "DWORD (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090E0",
+   "name": "HeapCreate",
+   "type": "HANDLE (__stdcall *)(DWORD flOptions, SIZE_T dwInitialSize, SIZE_T dwMaximumSize)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090E4",
+   "name": "WriteFile",
+   "type": "BOOL (__stdcall *)(HANDLE hFile, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite, LPDWORD lpNumberOfBytesWritten, LPOVERLAPPED lpOverlapped)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090E8",
+   "name": "SetLastError",
+   "type": "void (__stdcall *)(DWORD dwErrCode)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090EC",
+   "name": "TlsGetValue",
+   "type": "LPVOID (__stdcall *)(DWORD dwTlsIndex)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090F0",
+   "name": "GetProcAddress",
+   "type": "FARPROC (__stdcall *)(HMODULE hModule, LPCSTR lpProcName)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090F4",
+   "name": "GetModuleHandleA",
+   "type": "HMODULE (__stdcall *)(LPCSTR lpModuleName)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090F8",
+   "name": "SetHandleCount",
+   "type": "UINT (__stdcall *)(UINT uNumber)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE090FC",
+   "name": "GetStdHandle",
+   "type": "HANDLE (__stdcall *)(DWORD nStdHandle)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09100",
+   "name": "GetFileType",
+   "type": "DWORD (__stdcall *)(HANDLE hFile)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09104",
+   "name": "GetStartupInfoA",
+   "type": "void (__stdcall *)(LPSTARTUPINFOA lpStartupInfo)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09108",
+   "name": "FreeEnvironmentStringsA",
+   "type": "BOOL (__stdcall *)(LPCH penv)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0910C",
+   "name": "FreeEnvironmentStringsW",
+   "type": "BOOL (__stdcall *)(LPWCH penv)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09110",
+   "name": "InterlockedIncrement",
+   "type": "LONG (__stdcall *)(volatile LONG *lpAddend)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09114",
+   "name": "GetEnvironmentStrings",
+   "type": "LPCH (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09118",
+   "name": "GetEnvironmentStringsW",
+   "type": "LPWCH (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0911C",
+   "name": "GetEnvironmentVariableA",
+   "type": "DWORD (__stdcall *)(LPCSTR lpName, LPSTR lpBuffer, DWORD nSize)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09120",
+   "name": "GetVersionExA",
+   "type": "BOOL (__stdcall *)(LPOSVERSIONINFOA lpVersionInformation)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09124",
+   "name": "HeapDestroy",
+   "type": "BOOL (__stdcall *)(HANDLE hHeap)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09128",
+   "name": "GetOEMCP",
+   "type": "UINT (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0912C",
+   "name": "GetACP",
+   "type": "UINT (__stdcall *)()",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09130",
+   "name": "IsBadWritePtr",
+   "type": "BOOL (__stdcall *)(LPVOID lp, UINT_PTR ucb)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09134",
+   "name": "SetUnhandledExceptionFilter",
+   "type": "LPTOP_LEVEL_EXCEPTION_FILTER (__stdcall *)(LPTOP_LEVEL_EXCEPTION_FILTER lpTopLevelExceptionFilter)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09138",
+   "name": "IsBadReadPtr",
+   "type": "BOOL (__stdcall *)(const void *lp, UINT_PTR ucb)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0913C",
+   "name": "InterlockedDecrement",
+   "type": "LONG (__stdcall *)(volatile LONG *lpAddend)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09140",
+   "name": "GetCPInfo",
+   "type": "BOOL (__stdcall *)(UINT CodePage, LPCPINFO lpCPInfo)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09144",
+   "name": "LCMapStringW",
+   "type": "int (__stdcall *)(LCID Locale, DWORD dwMapFlags, LPCWSTR lpSrcStr, int cchSrc, LPWSTR lpDestStr, int cchDest)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09148",
+   "name": "FlushFileBuffers",
+   "type": "BOOL (__stdcall *)(HANDLE hFile)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0914C",
+   "name": "LoadLibraryA",
+   "type": "HMODULE (__stdcall *)(LPCSTR lpLibFileName)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09150",
+   "name": "SetStdHandle",
+   "type": "BOOL (__stdcall *)(DWORD nStdHandle, HANDLE hHandle)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09154",
+   "name": "MultiByteToWideChar",
+   "type": "int (__stdcall *)(UINT CodePage, DWORD dwFlags, LPCCH lpMultiByteStr, int cbMultiByte, LPWSTR lpWideCharStr, int cchWideChar)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09158",
+   "name": "GetStringTypeA",
+   "type": "BOOL (__stdcall *)(LCID Locale, DWORD dwInfoType, LPCSTR lpSrcStr, int cchSrc, LPWORD lpCharType)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0915C",
+   "name": "GetStringTypeW",
+   "type": "BOOL (__stdcall *)(DWORD dwInfoType, LPCWCH lpSrcStr, int cchSrc, LPWORD lpCharType)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09160",
+   "name": "LCMapStringA",
+   "type": "int (__stdcall *)(LCID Locale, DWORD dwMapFlags, LPCSTR lpSrcStr, int cchSrc, LPSTR lpDestStr, int cchDest)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09188",
+   "name": "wsprintfA",
+   "type": "int (*)(LPSTR, LPCSTR, ...)",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE091B0",
+   "name": "gpCellBuilderEncoders",
+   "type": "const D2CmpCellBuilderEncoder[2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE091B8",
+   "name": "sgpfnDecodeFunc",
+   "type": "const D2CmpCelDecodeFunc[2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE091C0",
+   "name": "gpfnCelConvert24To8",
+   "type": "const D2CmpCelConvert24To8Func[2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE091C8",
+   "name": "gpfnCelTransform",
+   "type": "const D2CmpCelTransformFunc[2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE09550",
+   "name": "gnDirection32ToFrameIndex",
+   "type": "const uint32_t[736]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0A0D0",
+   "name": "gnDirection64ToFrameIndex",
+   "type": "const uint32_t[512]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0A8D0",
+   "name": "gnCelShadowGameDirection",
+   "type": "const int32_t[512]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B0D0",
+   "name": "gnCelNormalDirection",
+   "type": "const int32_t[512]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B8D0",
+   "name": "gCelDirection8To4Default",
+   "type": "const uint8_t[8]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B8D8",
+   "name": "gCelDirection16To8Default",
+   "type": "const uint8_t[16]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B8E8",
+   "name": "gCelDirection8To4Alternate",
+   "type": "const uint8_t[8]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B8F0",
+   "name": "gCelDirection16To8Alternate",
+   "type": "const uint8_t[16]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B900",
+   "name": "gVtblCellBuilderTableBase",
+   "type": "const D2CmpCellBuilderTableVtable",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B910",
+   "name": "gVtblCellBuilderTableReuse",
+   "type": "const D2CmpCellBuilderTableVtable",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B920",
+   "name": "gVtblCellBuilderTableSync",
+   "type": "const D2CmpCellBuilderTableVtable",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B930",
+   "name": "gVtblCellBuilderTableExport",
+   "type": "const D2CmpCellBuilderTableVtable",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B940",
+   "name": "gaCodecFieldBits",
+   "type": "const int32_t[16]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0B980",
+   "name": "gadwCodecSignBits",
+   "type": "const uint32_t[32]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BA00",
+   "name": "gadwCodecLowMasks",
+   "type": "const uint32_t[33]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BA88",
+   "name": "gadwCodecSignExtend",
+   "type": "const uint32_t[32]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB10",
+   "name": "gdPaletteHueCircle",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB18",
+   "name": "gdPaletteHueSextant",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB20",
+   "name": "gdPaletteBlueHueOffset",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB28",
+   "name": "gdPaletteTwo",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB30",
+   "name": "gdPaletteOne",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB38",
+   "name": "gdPaletteZero",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB40",
+   "name": "gdPaletteHalf",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB48",
+   "name": "gdPaletteInv255",
+   "type": "const volatile double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB50",
+   "name": "gfPaletteFixedHueStep",
+   "type": "const float",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB58",
+   "name": "gdPaletteSelectiveHueMax",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB60",
+   "name": "gdPaletteSelectiveHueMin",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB68",
+   "name": "gdPaletteGrayLightBias",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB70",
+   "name": "gdPaletteGrayLightScale",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB78",
+   "name": "gdPaletteLuminanceBoost",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB80",
+   "name": "gdPaletteLuminanceReduction",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB88",
+   "name": "gfPaletteHueStep",
+   "type": "const float",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB90",
+   "name": "gdPaletteHueBlueBoundary",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BB98",
+   "name": "gdPaletteHueGreenBoundary",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BBA0",
+   "name": "gdPaletteInv60",
+   "type": "const volatile double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BBA8",
+   "name": "gdPaletteChannelHueOffset",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BBB0",
+   "name": "gdPaletteChannelScale255",
+   "type": "const double",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BD28",
+   "name": "ProcName",
+   "type": "const CHAR[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BD44",
+   "name": "ModuleName",
+   "type": "const CHAR[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BD58",
+   "name": "Source",
+   "type": "const char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BD60",
+   "name": "Str1",
+   "type": "const char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0BD78",
+   "name": "Name",
+   "type": "const CHAR[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C0C8",
+   "name": "LibFileName",
+   "type": "const CHAR[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C0D8",
+   "name": "SrcStr",
+   "type": "const WCHAR",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C4CC",
+   "name": "__IMPORT_DESCRIPTOR_Storm",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C4E0",
+   "name": "__IMPORT_DESCRIPTOR_Fog",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C4F4",
+   "name": "__IMPORT_DESCRIPTOR_KERNEL32",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0C508",
+   "name": "__IMPORT_DESCRIPTOR_USER32",
+   "type": null,
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D00C",
+   "name": "First",
+   "type": "_PVFV",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D020",
+   "name": "Last",
+   "type": "_PVFV",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D608",
+   "name": "Format",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D790",
+   "name": "szFastCmpSourcePath",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D7F4",
+   "name": "szFastCmpAssertLineRange",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0D828",
+   "name": "szFastCmpAssertStride",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EDB8",
+   "name": "gaPaletteStandardColors",
+   "type": "const D2CmpRGB24[13]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EDE0",
+   "name": "szPaletteAssertLuminance",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EE00",
+   "name": "szPaletteAssertSaturation",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EE20",
+   "name": "szPaletteAssertHue",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EE40",
+   "name": "szPaletteAssertInput",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EE48",
+   "name": "szPaletteSourcePath",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EED4",
+   "name": "OutputString",
+   "type": "CHAR[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EF64",
+   "name": "gnPalShiftAct",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EFB0",
+   "name": "szMsg",
+   "type": "char[2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0EFB4",
+   "name": "szFile",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F054",
+   "name": "gnCelHeaderCacheEntryCount",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F058",
+   "name": "gdwSpriteCompressedDataSetting",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F05C",
+   "name": "gpszDccExtension",
+   "type": "const char *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F060",
+   "name": "gpszDc6Extension",
+   "type": "const char *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F0E4",
+   "name": "szSourceFile",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F674",
+   "name": "szFormat",
+   "type": "char[]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0F7E8",
+   "name": "gaFloorComponentOffsets",
+   "type": "int32_t[25][2]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0FDE0",
+   "name": "dwTlsIndex",
+   "type": "DWORD",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0FDE8",
+   "name": "Str",
+   "type": "char *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0FEC0",
+   "name": "gpCrtLegacyAnchorNext",
+   "type": "D2CmpCrtLegacyRegion *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE0FEC4",
+   "name": "gpCrtLegacyAnchorPrevious",
+   "type": "D2CmpCrtLegacyRegion *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE11EE0",
+   "name": "gpCrtLegacyRegionSearchHint",
+   "type": "D2CmpCrtLegacyRegion *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE12410",
+   "name": "cbMultiByte",
+   "type": "int",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE12CA8",
+   "name": "gCellBuilderTable",
+   "type": "D2CmpCellBuilderTablePrefix",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE12D10",
+   "name": "gCelHardwareFreeCallback",
+   "type": "D2CmpCelHardwareFreeCallback",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE12D18",
+   "name": "gaCodecFrames",
+   "type": "D2CmpDccFrameState[256]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE15918",
+   "name": "gaCodecCellHistory",
+   "type": "D2CmpDccCellState[5625]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE31090",
+   "name": "gabCodecCodebooks",
+   "type": "uint8_t[262144]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE71090",
+   "name": "gabCodecImage",
+   "type": "uint8_t[120000]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE8E550",
+   "name": "gCodecCriticalSection",
+   "type": "CRITICAL_SECTION",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE8E568",
+   "name": "gbCodecCriticalSectionInitialized",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE8E570",
+   "name": "gaLensLeftBoundary",
+   "type": "int32_t[80]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE8E6B0",
+   "name": "gaLensRightBoundary",
+   "type": "int32_t[80]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE8E7F0",
+   "name": "gaLensSourceOffset",
+   "type": "int32_t[6400]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE94BF0",
+   "name": "gbFastCmpUseGenericDecoder",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE94BF8",
+   "name": "gnPaletteSquares",
+   "type": "int32_t[512]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE953F8",
+   "name": "gbPaletteTestBackground",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE953FC",
+   "name": "gnPaletteEndEntry",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95400",
+   "name": "gnPaletteStartEntry",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95408",
+   "name": "gabPaletteFileBytes",
+   "type": "uint8_t[768]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95708",
+   "name": "gabPaletteMask",
+   "type": "uint8_t[256]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95808",
+   "name": "gaPaletteEntries",
+   "type": "D2CmpPaletteEntry[256]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95C08",
+   "name": "gbPaletteLoaded",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95C0C",
+   "name": "gdwPaletteTransparentColor",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95C10",
+   "name": "gbPaletteFixBlack",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95C14",
+   "name": "gbPaletteMaskEnabled",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FE95C18",
+   "name": "gPalShiftTransforms",
+   "type": "uint8_t[9][105][256]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FED0D18",
+   "name": "gCelHeaderHash",
+   "type": "D2CmpCelHeaderHash",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FED1D18",
+   "name": "gSpriteGfxHashStorage",
+   "type": "D2CmpSpriteGfxHashStorage",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEE1D18",
+   "name": "sgtGfxCache",
+   "type": "D2CmpSpriteDataCache",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEE1D54",
+   "name": "gCelHeaderLruCache",
+   "type": "D2CmpLruCache",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEE1D88",
+   "name": "gSpriteHeaderFileOffsets",
+   "type": "uint32_t[16384]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1D88",
+   "name": "gbSpriteLowEndMachine",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1D8C",
+   "name": "gSpriteHardwareFreeCallback",
+   "type": "D2CmpSpriteHardwareFreeCallback",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1D90",
+   "name": "gbSpriteHandleErrorReported",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1D94",
+   "name": "gszEmptyString",
+   "type": "char[4]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1D98",
+   "name": "gTileLruCache",
+   "type": "D2CmpLruCache",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1DCC",
+   "name": "gbTileCacheInitialized",
+   "type": "int32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1DD0",
+   "name": "gnTileCacheConfiguredBytes",
+   "type": "uint32_t",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1DD4",
+   "name": "sgpfnHardwareFreeCallback",
+   "type": "D2CmpTileHardwareFreeCallback",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1DD8",
+   "name": "gpTileProjectRecords",
+   "type": "D2TileRecordStrc *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1E2C",
+   "name": "pAllocation",
+   "type": "char *",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1EA0",
+   "name": "Filename",
+   "type": "CHAR[260]",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1FAC",
+   "name": "gdwCrtLegacyDeferredDecommitCount",
+   "type": "unsigned int",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF1FB8",
+   "name": "gpCrtPreviousUnhandledExceptionFilter",
+   "type": "LPTOP_LEVEL_EXCEPTION_FILTER",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF2008",
+   "name": "CodePage",
+   "type": "UINT",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF215C",
+   "name": "Addend",
+   "type": "LONG",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF2384",
+   "name": "Locale",
+   "type": "LCID",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF33B4",
+   "name": "gnCrtSmallHeapRegionCount",
+   "type": "int",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF33B8",
+   "name": "lpMem",
+   "type": "LPVOID",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF33C0",
+   "name": "hHeap",
+   "type": "HANDLE",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF33C4",
+   "name": "gnCrtHeapPolicy",
+   "type": "int",
+   "source": "ida"
+  },
+  {
+   "ea": "0x6FEF34E0",
+   "name": "uNumber",
+   "type": "UINT",
+   "source": "ida"
+  }
+ ]
+}
