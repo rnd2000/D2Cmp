@@ -37,8 +37,7 @@ Visual Studio 2022 or later, platform toolset v143, C++20, configuration `Releas
 
     msbuild D2CMP.vcxproj /t:Rebuild /p:Configuration=Release /p:Platform=Win32
 
-Floating-point code compiles as SSE2. The original computes on the x87 stack; under 53- and 64-bit precision control
-the results are the same, and a difference only 24-bit precision would show is noted beside the code.
+Floating-point code compiles to the x87 FPU (`/arch:IA32`), as the original's does.
 
 ## Using it
 

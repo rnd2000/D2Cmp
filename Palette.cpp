@@ -9,10 +9,8 @@
 //  original's source file is D2CMP\SRC\Palette.cpp (the asserts in this unit name it). PALETTE_VirtualAllocRWX and PALETTE_VirtualRelease, at the end
 //  of the file, lie outside that range, among the import thunks at the end of the image.
 
-//  DIFFERENCE: CreateD2Palette, BuildColorShiftTables, HSLToRGB256 and BuildLuminanceTable compute on the x87 stack in the original and compile here
-//  as SSE2. Under the 53-bit precision control the runtime sets, each x87 intermediate rounds as a double does, and the constants are the original's
-//  bit for bit; under 24-bit precision control (what Direct3D leaves without D3DCREATE_FPU_PRESERVE) the original rounds to single precision and ours
-//  does not, a difference this code does not reproduce.
+//  CreateD2Palette, BuildColorShiftTables, HSLToRGB256 and BuildLuminanceTable compute on the x87 stack, as the original does (the project builds with
+//  /arch:IA32), so they round under whatever precision control the caller leaves; the constants are the original's bit for bit.
 //  Each floating-point comparison is written to take the arm the original's flag test (test ah, 41h / jp and the like) takes, a NaN included, though
 //  no NaN reaches any of them: every input is a byte or a constant. The original's _ftol conversions truncate as (int) does for every value the
 //  tables can produce (0..441).
